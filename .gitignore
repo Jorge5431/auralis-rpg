@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.vite/
+coverage/
+.env
+.env.*
+!.env.example
+assets_extraidos/
+assets_otimizados/
+*.blend
+*.fbx
+*.zip
+*.rar
+*.7z
+*.unitypackage
+Thumbs.db
+.DS_Store

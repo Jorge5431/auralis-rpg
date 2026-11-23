@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#d8e8e6" />
+    <meta
+      name="description"
+      content="Explore a primeira fundação 3D da ilha flutuante de Auralis RPG."
+    />
+    <title>Auralis RPG — Ilha flutuante</title>
+  </head>
+  <body>
+    <main class="world" id="world">
+      <canvas id="island-canvas" aria-label="Ilha flutuante 3D de Auralis RPG"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Auralis RPG, início">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span class="brand-copy">
+            <strong>AURALIS</strong>
+            <small>RPG · VERSÃO 9</small>
+          </span>
+        </a>
+        <div class="world-status"><span class="status-dot"></span> MAPA FUNDADOR</div>
+      </header>
+
+      <section class="island-intro" aria-label="Sobre a ilha">
+        <p class="eyebrow">UM REINO ACIMA DAS NUVENS</p>
+        <h1>Ilha de Auralis</h1>
+        <p class="intro-copy">Uma nova terra, desenhada para ser explorada.</p>
+        <div class="intro-rule"><span></span><span></span><span></span></div>
+        <p class="live-region" id="live-region" aria-live="polite">Visão geral da ilha</p>
+      </section>
+
+      <aside class="island-compass" aria-label="Orientação da ilha">
+        <span class="compass-n">N</span>
+        <span class="compass-star" aria-hidden="true">✦</span>
+        <span class="compass-s">S</span>
+      </aside>
+
+      <section class="region-panel" aria-label="Regiões da ilha">
+        <div class="region-heading">
+          <span class="eyebrow">ESCOLHA UM LUGAR</span>
+          <span class="region-count">04 REGIÕES</span>
+        </div>
+        <div class="region-list">
+          <button class="region-button is-active" type="button" data-region="overview" aria-pressed="true">
+            <span class="region-icon">✧</span><span><strong>Visão da ilha</strong><small>O reino suspenso</small></span>
+          </button>
+          <button class="region-button" type="button" data-region="village" aria-pressed="false">
+            <span class="region-icon">⌂</span><span><strong>Vila &amp; comércio</strong><small>Casas e mercado</small></span>
+          </button>
+          <button class="region-button" type="button" data-region="flock" aria-pressed="false">
+            <span class="region-icon">♧</span><span><strong>Campo das ovelhas</strong><small>Pastagem e torre</small></span>
+          </button>
+          <button class="region-button" type="button" data-region="lake" aria-pressed="false">
+            <span class="region-icon">≈</span><span><strong>Lago central</strong><small>Água entre as árvores</small></span>
+          </button>
+          <button class="region-button" type="button" data-region="mountain" aria-pressed="false">
+            <span class="region-icon">⌁</span><span><strong>Montanha &amp; cachoeira</strong><small>O extremo sul da ilha</small></span>
+          </button>
+        </div>
+      </section>
+
+      <div class="interaction-hint" id="interaction-hint">
+        <span class="hint-orbit" aria-hidden="true">↗</span>
+        <span><strong>Explore a ilha</strong><small>Arraste para girar · role para aproximar</small></span>
+      </div>
+
+      <button class="reset-view" id="reset-view" type="button" aria-label="Recentrar câmera">
+        <span aria-hidden="true">⟲</span><span>REINICIAR VISTA</span>
+      </button>
+
+      <div class="loading-screen" id="loading-screen" role="status" aria-live="polite">
+        <span class="loading-emblem" aria-hidden="true">✦</span>
+        <strong>Erguendo Auralis</strong>
+        <span class="loading-message" id="loading-message">Preparando o primeiro mapa…</span>
+        <span class="loading-track"><span id="loading-progress"></span></span>
+      </div>
+
+      <div class="error-message" id="error-message" role="alert" hidden>
+        Seu navegador não conseguiu iniciar a cena 3D. Atualize o navegador ou tente em um dispositivo com WebGL.
+      </div>
+
+      <footer class="footer-note"><span>ARQUIVO DE EXPLORAÇÃO</span><span>01 / 01</span></footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
