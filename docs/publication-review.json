@@ -1,6 +1,6 @@
 {
   "branch": "rebuild/auralis-v10",
-  "reviewed_commit": "4119f550764683eee7a5617a86f7d23519460f33",
+  "reviewed_commit": "6c8b3857166c0cbeb3c0f2186c656b2ff2fbdf78",
   "changed_files": 43,
   "largest_changed_files": [
     {
@@ -38,5 +38,23 @@
   ],
   "secret_pattern_findings_paths_only": [],
   "scan_scope": "Known private-key, GitHub-token and AWS-access-key patterns in changed text files; not a guarantee of absence of secrets.",
-  "remote_publication": "Not performed; user requested preparation after review."
+  "remote_publication": "Not performed; user requested preparation after review.",
+  "hdri_provenance": [
+    {
+      "asset": "DaySkyHDRI069A",
+      "source": "https://ambientcg.com/get?file=DaySkyHDRI069A_1K.zip",
+      "sha256": "ce1fa06b6b967901a9c7eff911a0ce99fe5b433d0a0c000986ca72fca49fa5c7",
+      "matches": true
+    },
+    {
+      "asset": "NightSkyHDRI003",
+      "source": "https://ambientcg.com/get?file=NightSkyHDRI003_1K.zip",
+      "sha256": "0fd1e0f5e29b3a986de174bf2ae188ad15746bbff8bb2a30b34104d130a7089a",
+      "matches": true
+    }
+  ],
+  "tracked_file_scan_count": 744,
+  "asset_files_verified": 694,
+  "variants_verified": 80,
+  "publication_ready": true
 }
