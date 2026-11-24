@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap");
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #f4edda;
+  background: #9dcfe8;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  touch-action: none;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #c5ae7466;
+  color: #f6e8c5;
+  background: #244944e8;
+  padding: 11px 16px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+button:hover,
+button:focus-visible {
+  background: #526d55;
+  outline: 2px solid #d5c08a;
+}
+button:active {
+  transform: translateY(1px);
+}
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+}
+h2 {
+  font-size: 38px;
+  margin: 12px 0 22px;
+}
+h3 {
+  font-size: 23px;
+  margin: 7px 0;
+}
+p {
+  line-height: 1.7;
+  color: #d9e2d3;
+}
+small {
+  font-size: 11px;
+  color: #c4d0bd;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: #d7c38e;
+  font-weight: 600;
+}
+.hidden {
+  display: none !important;
+}
+#loading {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #183e40;
+  color: #ead8a8;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  padding: 30px;
+  z-index: 20;
+}
+#ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.hud > * {
+  pointer-events: auto;
+}
+.vitals {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  width: 240px;
+  padding: 15px 18px;
+  background: linear-gradient(110deg, #122f32e8, #1e4c4155);
+  border-left: 2px solid #cdb47b;
+}
+.vitals h3 {
+  margin: 9px 0;
+}
+.bar {
+  height: 7px;
+  border-radius: 9px;
+  background: #0c232799;
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  transition: width 0.15s;
+}
+.health i {
+  background: linear-gradient(90deg, #7cbb83, #c5db8d);
+}
+.subbars {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0 8px;
+}
+.subbars .bar {
+  flex: 1;
+  height: 4px;
+}
+.mana i {
+  background: #8bcde7;
+}
+.stamina i {
+  background: #e3c27d;
+}
+.location {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-shadow: 0 2px 5px #123;
+  padding: 5px 20px;
+}
+.location h3 {
+  font-size: 25px;
+}
+.quest {
+  position: absolute;
+  left: 32px;
+  top: 200px;
+  width: 240px;
+  text-shadow: 0 2px 4px #123;
+}
+.quest p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.quest h3 {
+  font-size: 21px;
+}
+.minimap {
+  position: absolute;
+  right: 26px;
+  top: 28px;
+  width: 150px;
+  height: 175px;
+  border: 1px solid #d9c69788;
+  border-radius: 70px 70px 9px 9px;
+  box-shadow: 0 8px 30px #1235;
+}
+.toolbar {
+  position: absolute;
+  bottom: 39px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  white-space: nowrap;
+}
+.toolbar button {
+  padding: 10px 14px;
+  font-size: 11px;
+  background: #173a39dc;
+  backdrop-filter: blur(10px);
+}
+.hint {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  text-shadow: 0 1px 4px #000;
+}
+.prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 115px;
+  transform: translateX(-50%);
+  padding: 10px 18px;
+  background: #173e3ac9;
+  border-radius: 5px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.prompt:empty {
+  display: none;
+}
+.notification {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  max-width: 75%;
+  padding: 14px 24px;
+  background: #183d39ed;
+  border: 1px solid #d3c28777;
+  text-align: center;
+  opacity: 0;
+  transition: 0.25s;
+  z-index: 8;
+}
+.notification.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.panel {
+  pointer-events: auto;
+  color: #f4edda;
+  width: min(620px, 92vw);
+  max-height: 86dvh;
+  border: 1px solid #c5ae7488;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #153b3df5, #203e31f5);
+  padding: 32px 38px;
+  box-shadow: 0 30px 100px #09272b88;
+  backdrop-filter: blur(16px);
+}
+.panel::backdrop {
+  background: #103c3c22;
+  backdrop-filter: blur(2px);
+}
+.panel header {
+  position: relative;
+  border-bottom: 1px solid #c5ae7444;
+  margin-bottom: 24px;
+}
+.close {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  padding: 4px 10px;
+  background: transparent;
+  font-size: 24px;
+  border: 0;
+}
+.panel input:not([type="radio"]) {
+  display: block;
+  width: 100%;
+  background: #112c2b;
+  border: 1px solid #c1b08066;
+  color: white;
+  padding: 12px;
+  margin: 10px 0 20px;
+}
+.menu-actions {
+  display: grid;
+  gap: 10px;
+  margin: 25px 0;
+}
+.menu-actions button:first-child {
+  background: #b99b60;
+  color: #183531;
+  font-weight: 600;
+}
+.classes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin: 20px 0;
+}
+.class-card {
+  padding: 14px;
+  border: 1px solid #92aa8c55;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.class-card:has(input:checked) {
+  border-color: #e9cd8a;
+  background: #78966a33;
+}
+.class-card small {
+  display: block;
+  margin: 8px 0 0 20px;
+}
+.class-card strong {
+  font-weight: 500;
+  margin-left: 5px;
+}
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.item-grid article {
+  border: 1px solid #c5ae7433;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.item-grid span {
+  font-size: 12px;
+  color: #b9ccb8;
+}
+.item-grid button {
+  font-size: 12px;
+  padding: 8px;
+}
+.quest-row {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #c5ae7433;
+  padding: 10px 0 15px;
+}
+.quest-row > span {
+  color: #ddc890;
+  padding-top: 14px;
+}
+.quest-row p {
+  margin: 5px 0;
+}
+.touch {
+  display: none;
+}
+#stats {
+  position: absolute;
+  bottom: 90px;
+  left: 18px;
+  font: 11px monospace;
+  color: #e6efcf;
+  background: #1239;
+}
+@media (pointer: coarse) {
+  .touch {
+    display: block;
+  }
+  #joystick {
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    width: 110px;
+    height: 110px;
+    border: 1px solid #ebdbae88;
+    border-radius: 50%;
+    background: #204f4c55;
+    touch-action: none;
+  }
+  #joystick i {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 40px;
+    height: 40px;
+    background: #d8dfc3aa;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .touch-actions {
+    position: absolute;
+    bottom: 110px;
+    right: 20px;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    width: 145px;
+  }
+  .touch-actions button {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    padding: 5px;
+    font-size: 20px;
+    touch-action: none;
+  }
+  .hint {
+    display: none;
+  }
+  .toolbar {
+    bottom: 15px;
+    gap: 3px;
+  }
+  .toolbar button {
+    padding: 10px 9px;
+  }
+  .prompt {
+    bottom: 80px;
+  }
+  .quest {
+    top: 160px;
+    width: 180px;
+    left: 20px;
+  }
+  .minimap {
+    width: 103px;
+    height: 120px;
+    right: 16px;
+    top: 18px;
+  }
+  .vitals {
+    left: 15px;
+    top: 17px;
+    width: 190px;
+    padding: 12px;
+  }
+  .vitals .eyebrow {
+    font-size: 7px;
+  }
+  .location {
+    top: 20px;
+  }
+  .location h3 {
+    font-size: 20px;
+  }
+  .panel {
+    padding: 23px;
+  }
+}
+@media (max-width: 650px) {
+  .location {
+    top: 147px;
+    left: auto;
+    right: 15px;
+    transform: none;
+  }
+  .location .eyebrow {
+    display: none;
+  }
+  .location h3 {
+    font-size: 18px;
+  }
+  .quest {
+    width: 170px;
+  }
+  .toolbar button {
+    font-size: 9px;
+    padding: 10px 7px;
+  }
+  .classes {
+    grid-template-columns: 1fr 1fr;
+  }
+  .panel h2 {
+    font-size: 29px;
+  }
+  .item-grid {
+    grid-template-columns: 1fr;
+  }
+  .notification {
+    top: 45%;
+    font-size: 12px;
+  }
+  .hint {
+    display: none;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body > canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 650px) {
+  .toolbar {
+    max-width: calc(100vw - 12px);
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  .vitals {
+    width: 175px;
+  }
+  .quest {
+    top: 165px;
+  }
+  .notification {
+    max-width: 90%;
+    width: 320px;
+  }
+  .touch-actions {
+    bottom: 95px;
+  }
+  .panel {
+    max-height: 90dvh;
+  }
+  .location {
+    max-width: 160px;
+  }
+  .location h3 {
+    font-size: 16px;
+  }
+}
