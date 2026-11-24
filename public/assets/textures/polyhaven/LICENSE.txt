@@ -1,0 +1,8 @@
+﻿Source: Poly Haven
+Website: https://polyhaven.com
+License: CC0 1.0 Universal
+License URL: https://polyhaven.com/license
+
+14 PBR materials optimized for Auralis RPG.
+Textures resized to a maximum of 1024 pixels.
+Original assets remain under CC0.
