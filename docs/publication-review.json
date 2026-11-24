@@ -1,0 +1,42 @@
+{
+  "branch": "rebuild/auralis-v10",
+  "reviewed_commit": "4119f550764683eee7a5617a86f7d23519460f33",
+  "changed_files": 43,
+  "largest_changed_files": [
+    {
+      "path": "docs/screenshots/02-village.png",
+      "bytes": 761759
+    },
+    {
+      "path": "docs/screenshots/03-island.png",
+      "bytes": 750435
+    },
+    {
+      "path": "docs/screenshots/04-mobile-landscape.png",
+      "bytes": 333915
+    },
+    {
+      "path": "docs/screenshots/01-menu.png",
+      "bytes": 332865
+    },
+    {
+      "path": "docs/screenshots/05-mobile-portrait.png",
+      "bytes": 233223
+    },
+    {
+      "path": "PROMPT_MASTER.json",
+      "bytes": 66008
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 58049
+    },
+    {
+      "path": "src/v10/Game.ts",
+      "bytes": 41172
+    }
+  ],
+  "secret_pattern_findings_paths_only": [],
+  "scan_scope": "Known private-key, GitHub-token and AWS-access-key patterns in changed text files; not a guarantee of absence of secrets.",
+  "remote_publication": "Not performed; user requested preparation after review."
+}
