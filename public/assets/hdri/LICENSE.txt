@@ -1,0 +1,7 @@
+﻿Source: ambientCG
+License: CC0 1.0 Universal
+
+https://ambientcg.com/view?id=DaySkyHDRI069A
+https://ambientcg.com/view?id=NightSkyHDRI003
+
+Day and night environment maps for Auralis RPG.
