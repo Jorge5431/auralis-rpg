@@ -1,0 +1,2042 @@
+
+{
+  "prompt_master": {
+    "version": "10.0",
+    "language": "pt-BR",
+    "project_name": "Auralis RPG",
+    "subtitle": "O Reino Acima das Nuvens",
+    "instruction": "Atue como uma equipe completa de desenvolvimento de jogos, incluindo arquitetura de software, programação Three.js, design de mundos, direção artística, level design, animação, física, gameplay, interface, otimização e garantia de qualidade. Construa o projeto descrito neste documento de forma funcional, modular e verificável. Não entregue apenas uma demonstração visual, uma maquete ou um documento de planejamento.",
+    "development_mode": {
+      "create_from_scratch": true,
+      "reuse_previous_game_code": false,
+      "reuse_authorized_asset_library": true,
+      "preserve_previous_versions": true,
+      "avoid_placeholder_gameplay": true,
+      "avoid_fake_functionality": true,
+      "avoid_unnecessary_user_intervention": true,
+      "implement_in_validated_phases": true,
+      "priority": "Qualidade visual, exploração funcional, consistência artística e desempenho."
+    },
+    "repository": {
+      "provider": "GitHub",
+      "url": "https://github.com/Jorge5431/auralis-rpg.git",
+      "asset_branch": "assets/biblioteca-completa",
+      "confirmed_asset_commit": "2a57a61",
+      "development_branch": "rebuild/auralis-v10",
+      "protected_branch": "main",
+      "local_repository_windows": "C:/Users/jv799/Downloads/auralis-rpg",
+      "instructions": [
+        "Verificar o estado atual do repositório.",
+        "Preservar alterações locais não relacionadas.",
+        "Atualizar as referências remotas.",
+        "Localizar a branch assets/biblioteca-completa.",
+        "Criar a branch rebuild/auralis-v10 a partir da biblioteca de recursos, caso ainda não exista.",
+        "Preservar todos os recursos autorizados.",
+        "Não utilizar o código das versões anteriores como base arquitetural.",
+        "Não apagar arquivos de licença.",
+        "Não modificar a branch main.",
+        "Não executar force push.",
+        "Criar commits pequenos e descritivos por etapa.",
+        "Não publicar credenciais, arquivos privados ou referências sem autorização."
+      ]
+    },
+    "mandatory_documentation": {
+      "catalog": "assets/ASSET_CATALOG.json",
+      "integration_guide": "assets/ASSET_GUIDE.md",
+      "credits_and_licenses": "assets/CREDITS.md",
+      "texture_variants": "public/assets/optimized/texture-variants.json",
+      "master_specification": "PROMPT_MASTER.json",
+      "instructions": [
+        "Ler integralmente os documentos antes de implementar.",
+        "Utilizar o catálogo como fonte de verdade para os caminhos dos recursos.",
+        "Conferir os caminhos e nomes reais dos arquivos.",
+        "Não inventar nomes de modelos ou animações.",
+        "Verificar se os arquivos foram alterados desde a geração do catálogo.",
+        "Registrar problemas encontrados e atualizar a documentação quando necessário."
+      ]
+    },
+    "technology_stack": {
+      "language": "TypeScript",
+      "build_tool": "Vite",
+      "rendering_engine": "Three.js",
+      "physics_engine": "@dimforge/rapier3d-compat",
+      "graphics_api": "WebGL2",
+      "interface": "HTML, CSS e TypeScript",
+      "asset_formats": [
+        "GLB",
+        "glTF",
+        "PNG",
+        "JPEG",
+        "EXR"
+      ],
+      "storage": {
+        "preferences": "localStorage",
+        "game_saves": "IndexedDB",
+        "save_versioning": true
+      },
+      "platforms": [
+        "Windows desktop",
+        "Linux desktop",
+        "macOS",
+        "Android browser",
+        "Navegadores modernos compatíveis"
+      ],
+      "deployment": {
+        "production_build": true,
+        "static_hosting_compatible": true,
+        "pwa_support": true,
+        "offline_support": "Cache seletivo de recursos essenciais, sem baixar toda a biblioteca automaticamente."
+      }
+    },
+    "game_identity": {
+      "genre": [
+        "RPG",
+        "Fantasia medieval",
+        "Isekai",
+        "Aventura",
+        "Exploração",
+        "Simulação de vida",
+        "Mundo semiaberto"
+      ],
+      "camera": "Terceira pessoa",
+      "world": "Uma grande ilha flutuante acima das nuvens.",
+      "experience": [
+        "Explorar um mundo de fantasia.",
+        "Conhecer habitantes e suas histórias.",
+        "Desenvolver um personagem.",
+        "Combater criaturas.",
+        "Coletar recursos.",
+        "Negociar mercadorias.",
+        "Completar missões.",
+        "Construir e personalizar.",
+        "Descobrir segredos da ilha."
+      ],
+      "initial_scope": "Uma ilha principal completa e explorável, com arquitetura preparada para futuras expansões."
+    },
+    "art_direction": {
+      "style": "Fantasia medieval estilizada em 3D, com materiais detalhados, natureza exuberante e iluminação cinematográfica.",
+      "inspirations": [
+        "Genshin Impact: atmosfera, natureza e exploração.",
+        "The Legend of Zelda Breath of the Wild: liberdade, composição ambiental e sensação de aventura.",
+        "Ilustrações de mundos flutuantes de fantasia.",
+        "Arquitetura medieval europeia com estruturas de madeira e pedra."
+      ],
+      "copyright_rule": "Utilizar inspirações apenas como referência artística. Não copiar personagens, mapas, interfaces, marcas, músicas ou recursos protegidos.",
+      "visual_keywords": [
+        "organic",
+        "immersive",
+        "stylized fantasy",
+        "lush vegetation",
+        "cinematic lighting",
+        "natural terrain",
+        "medieval architecture",
+        "floating island",
+        "volumetric atmosphere",
+        "explorable world"
+      ],
+      "color_palette": {
+        "grass": [
+          "#568F45",
+          "#78AD50",
+          "#A2C96B"
+        ],
+        "forest": [
+          "#285D3C",
+          "#3C7947",
+          "#5A9650"
+        ],
+        "water": [
+          "#36AFC1",
+          "#66D5D9",
+          "#B9F0E9"
+        ],
+        "stone": [
+          "#777D83",
+          "#969B96",
+          "#545D61"
+        ],
+        "wood": [
+          "#79543B",
+          "#A47A50",
+          "#4D382B"
+        ],
+        "roof": [
+          "#A14E38",
+          "#79413B",
+          "#BB7850"
+        ],
+        "sky": [
+          "#6BB7ED",
+          "#A9DDF5",
+          "#F0F8FF"
+        ]
+      },
+      "visual_quality_rules": [
+        "O mundo deve parecer um ambiente habitável e não uma maquete.",
+        "Manter escala coerente entre pessoas, animais, árvores, casas e montanhas.",
+        "Evitar geometria primitiva evidente no resultado final.",
+        "Utilizar materiais com variações naturais.",
+        "Criar composição visual com profundidade.",
+        "Garantir boa aparência tanto em visão aérea quanto ao nível do personagem.",
+        "Manter consistência entre todos os modelos utilizados."
+      ]
+    },
+    "visual_references": {
+      "original_drawing": {
+        "priority": "highest",
+        "description": "Desenho original do usuário definindo a distribuição geográfica da ilha.",
+        "availability": "Anexar diretamente ao Codex quando disponível.",
+        "rule": "O desenho original tem prioridade sobre referências artísticas genéricas."
+      },
+      "private_reference_directory": "C:/Users/jv799/Downloads/auralis-assets-privados/references",
+      "reference_categories": [
+        "01-desenho-original",
+        "02-ilhas-flutuantes",
+        "03-montanhas",
+        "04-agua",
+        "05-vegetacao",
+        "06-arquitetura-medieval",
+        "07-atmosfera",
+        "08-personagens",
+        "09-erros-versao-anterior"
+      ],
+      "reference_descriptions": {
+        "island": "Ilha irregular de grande escala, com massa rochosa profunda, penhascos naturais e vegetação.",
+        "mountains": "Montanhas orgânicas com diferentes elevações, encostas, rochas e vegetação.",
+        "water": "Lago azul-turquesa, cachoeira integrada à montanha, espuma, reflexos e movimento.",
+        "forest": "Vegetação densa e variada, caminhos naturais, flores, arbustos e árvores.",
+        "village": "Casas medievais detalhadas, estruturas de madeira, pedra, telhados inclinados e ruas naturais.",
+        "sky": "Céu amplo, nuvens em diferentes altitudes e iluminação atmosférica.",
+        "negative_examples": "Capturas da V9 mostrando terreno artificial, montanhas piramidais, água pouco natural e escala de maquete."
+      },
+      "rules": [
+        "Não bloquear o desenvolvimento caso as pastas estejam vazias.",
+        "Utilizar as descrições deste documento enquanto as imagens não estiverem disponíveis.",
+        "Não presumir que imagens privadas estejam no GitHub.",
+        "Não publicar referências de terceiros sem autorização."
+      ]
+    },
+    "world_design": {
+      "coordinate_system": {
+        "up_axis": "Y",
+        "north": "-Z",
+        "south": "+Z",
+        "east": "+X",
+        "west": "-X",
+        "unit": "metro virtual"
+      },
+      "initial_world_size": {
+        "width": 400,
+        "length": 500,
+        "adjustable": true,
+        "rule": "A escala é uma referência inicial e deve ser ajustada conforme exploração, composição e desempenho."
+      },
+      "island_geometry": {
+        "shape": "Irregular, assimétrica e orgânica.",
+        "surface": "Terreno contínuo com variações de altitude.",
+        "underside": "Grande massa rochosa fragmentada e irregular.",
+        "cliffs": true,
+        "erosion_details": true,
+        "rock_strata": true,
+        "vegetation_on_edges": true,
+        "natural_silhouette": true,
+        "forbidden": [
+          "Disco perfeitamente circular.",
+          "Plataforma plana com borda artificial.",
+          "Cone liso invertido.",
+          "Montanhas formadas apenas por pirâmides.",
+          "Terreno com aparência de tabuleiro.",
+          "Limites geométricos visivelmente artificiais."
+        ]
+      },
+      "terrain_generation": {
+        "deterministic_seed": true,
+        "heightfield": true,
+        "multi_octave_noise": true,
+        "domain_warping": true,
+        "biome_masks": true,
+        "slope_masks": true,
+        "water_masks": true,
+        "path_masks": true,
+        "terrain_chunks": true,
+        "collision_meshes": true,
+        "rules": [
+          "Projetar a geografia antes de distribuir objetos.",
+          "Garantir que caminhos e áreas habitáveis sejam acessíveis.",
+          "Evitar objetos flutuando ou enterrados.",
+          "Separar terreno visual de colisão quando necessário.",
+          "Garantir transições naturais entre biomas."
+        ]
+      },
+      "regions": {
+        "northern_village": {
+          "position": "Norte",
+          "purpose": "Centro social e comercial.",
+          "features": [
+            "Casas medievais.",
+            "Praça central.",
+            "Mercado.",
+            "Ferreiro.",
+            "Loja de equipamentos.",
+            "Loja de suprimentos.",
+            "Taverna.",
+            "Guilda de aventureiros.",
+            "Poço.",
+            "Ruas de pedra.",
+            "Cercas.",
+            "Flores e iluminação."
+          ]
+        },
+        "northeastern_farm": {
+          "position": "Nordeste, lado direito da ilha.",
+          "purpose": "Produção rural e criação de animais.",
+          "features": [
+            "Campo de ovelhas.",
+            "Cercados.",
+            "Celeiro.",
+            "Área de alimentação.",
+            "Pequenas plantações.",
+            "NPC fazendeiro.",
+            "Animais com comportamento autônomo."
+          ]
+        },
+        "eastern_tower": {
+          "position": "Leste, abaixo da fazenda.",
+          "purpose": "Ponto de observação e exploração.",
+          "features": [
+            "Torre medieval de pedra.",
+            "Entrada acessível.",
+            "Escadas.",
+            "Plataforma de observação.",
+            "Bandeiras.",
+            "Possível local de missão."
+          ]
+        },
+        "central_lake": {
+          "position": "Centro",
+          "purpose": "Marco geográfico e área de pesca.",
+          "features": [
+            "Lago de formato irregular.",
+            "Margens naturais.",
+            "Água animada.",
+            "Reflexos.",
+            "Ondulações.",
+            "Pedras nas margens.",
+            "Vegetação aquática.",
+            "Área de pesca."
+          ]
+        },
+        "surrounding_forest": {
+          "position": "Ao redor do lago e nas laterais.",
+          "purpose": "Exploração, coleta e encontros.",
+          "features": [
+            "Árvores variadas.",
+            "Arbustos.",
+            "Flores.",
+            "Cogumelos.",
+            "Rochas.",
+            "Trilhas.",
+            "Clareiras.",
+            "Animais selvagens.",
+            "Recursos coletáveis."
+          ]
+        },
+        "southern_mountains": {
+          "position": "Sul",
+          "purpose": "Região elevada e fonte da cachoeira.",
+          "features": [
+            "Montanhas orgânicas.",
+            "Encostas irregulares.",
+            "Formações rochosas.",
+            "Cachoeira.",
+            "Trilhas de subida.",
+            "Mirantes.",
+            "Possíveis cavernas.",
+            "Áreas de mineração."
+          ]
+        }
+      },
+      "connectivity": {
+        "natural_paths": true,
+        "village_to_farm": true,
+        "village_to_lake": true,
+        "farm_to_tower": true,
+        "lake_to_forest": true,
+        "forest_to_mountains": true,
+        "bridges_where_needed": true,
+        "navigation_validation": true
+      }
+    },
+    "asset_library": {
+      "root": "public/assets",
+      "runtime_url": "/assets/",
+      "catalog_required": true,
+      "confirmed_inventory": {
+        "files": 694,
+        "size_mib": 665.42,
+        "gltf_glb_models": 77,
+        "glb_files": 44,
+        "gltf_files": 33,
+        "fbx_files": 12,
+        "obj_files": 6,
+        "animation_entries": 358,
+        "skins": 60,
+        "optimized_texture_variants": 80,
+        "duplicate_groups": 45,
+        "missing_external_dependencies_at_audit": 0,
+        "catalog_read_errors_at_audit": 0
+      },
+      "inventory_note": "As contagens incluem recursos auxiliares e duplicatas. Não representam necessariamente modelos ou animações únicos. A auditoria estrutural não substitui testes visuais.",
+      "characters": {
+        "rpg_classes": {
+          "provider": "Quaternius",
+          "path": "public/assets/models/characters/quaternius-rpg-classes/",
+          "runtime_models": "public/assets/models/characters/quaternius-rpg-classes/glTF/",
+          "license": "CC0 1.0",
+          "classes": [
+            "Warrior",
+            "Ranger",
+            "Rogue",
+            "Wizard",
+            "Cleric",
+            "Monk"
+          ],
+          "animation_entries": 76,
+          "weapons": [
+            "Warrior_Sword",
+            "Ranger_Bow",
+            "Ranger_Arrow",
+            "Rogue_Dagger",
+            "Wizard_Staff",
+            "Cleric_Staff"
+          ],
+          "integration_rules": [
+            "Utilizar os modelos glTF animados como personagens jogáveis.",
+            "Carregar armas de acordo com a classe.",
+            "Converter modelos OBJ ou FBX para GLB quando necessário.",
+            "Verificar materiais e texturas das armas.",
+            "Anexar armas aos ossos corretos.",
+            "Não inventar nomes de ossos.",
+            "Validar a hierarquia dos esqueletos."
+          ]
+        },
+        "modular_characters": {
+          "provider": "Quaternius",
+          "path": "public/assets/models/characters/quaternius-modular/",
+          "license": "CC0 1.0",
+          "modular_parts": 20,
+          "complete_outfits": 4,
+          "outfits": [
+            "Female_Peasant",
+            "Male_Peasant",
+            "Female_Ranger",
+            "Male_Ranger"
+          ],
+          "usage": [
+            "NPCs.",
+            "Habitantes da vila.",
+            "Comerciantes.",
+            "Fazendeiros.",
+            "Guardas.",
+            "Personalização futura."
+          ],
+          "rules": [
+            "Validar compatibilidade dos esqueletos.",
+            "Verificar bind pose antes de transferir animações.",
+            "Evitar sobreposição de partes corporais.",
+            "Remover geometria invisível quando seguro.",
+            "Não assumir que todos os modelos possuem animações."
+          ]
+        },
+        "legacy_base_characters": {
+          "path": "public/assets/models/quaternius/",
+          "models": [
+            "Female_Peasant",
+            "Male_Peasant",
+            "Male_Ranger"
+          ],
+          "usage": "Recursos alternativos para NPCs quando apropriado."
+        }
+      },
+      "creatures": {
+        "provider": "Daniel Gruginski",
+        "license": "CC0 1.0",
+        "root": "public/assets/models/creatures-complete/",
+        "beasts_path": "public/assets/models/creatures-complete/beasts/",
+        "insectoids_path": "public/assets/models/creatures-complete/insectoids/",
+        "beasts": [
+          "Bat",
+          "Bear",
+          "Chicken",
+          "Cow",
+          "Deer",
+          "Dragon",
+          "Eagle",
+          "Goat",
+          "Horse",
+          "Hydra",
+          "Leech",
+          "Mammoth",
+          "Ooze",
+          "Pig",
+          "Rat",
+          "Rhino",
+          "Sheep",
+          "Turtle",
+          "Warg",
+          "Wolf",
+          "ZombieWolf"
+        ],
+        "insectoids": [
+          "Broodmother",
+          "Centipede",
+          "Spider",
+          "Spiderling",
+          "Wasp"
+        ],
+        "props": [
+          "SpiderEgg_Clutch",
+          "SpiderEgg_Hatched",
+          "SpiderEgg_Single"
+        ],
+        "domestic_animals": [
+          "Sheep",
+          "Chicken",
+          "Cow",
+          "Goat",
+          "Horse",
+          "Pig"
+        ],
+        "wildlife": [
+          "Deer",
+          "Eagle",
+          "Bat",
+          "Rat",
+          "Turtle"
+        ],
+        "hostile_creatures": [
+          "Wolf",
+          "Warg",
+          "ZombieWolf",
+          "Spider",
+          "Spiderling",
+          "Centipede",
+          "Wasp",
+          "Ooze",
+          "Leech"
+        ],
+        "large_creatures": [
+          "Bear",
+          "Rhino",
+          "Mammoth",
+          "Dragon",
+          "Hydra",
+          "Broodmother"
+        ],
+        "integration_rules": [
+          "Consultar os arquivos de metadados de animação.",
+          "Validar os materiais externos dos modelos.",
+          "Os arquivos TRES são referências de configuração do Godot, não recursos diretamente executáveis no Three.js.",
+          "Reimplementar efeitos e comportamentos necessários em TypeScript.",
+          "Utilizar AnimationMixer.",
+          "Tratar corretamente animações com root motion.",
+          "Evitar movimentação duplicada entre animação e física.",
+          "Não carregar todas as criaturas simultaneamente.",
+          "Distribuir criaturas conforme habitat, progressão e desempenho.",
+          "Preservar documentação e créditos originais."
+        ]
+      },
+      "environment_models": {
+        "kenney_nature": {
+          "path": "public/assets/models/kenney/nature/",
+          "license": "CC0 1.0",
+          "usage": [
+            "Árvores.",
+            "Flores.",
+            "Rochas.",
+            "Fogueiras.",
+            "Elementos naturais."
+          ]
+        },
+        "kenney_fantasy_town": {
+          "path": "public/assets/models/kenney/fantasy-town/",
+          "license": "CC0 1.0",
+          "usage": [
+            "Bancas.",
+            "Paredes.",
+            "Portas.",
+            "Janelas.",
+            "Elementos arquitetônicos."
+          ]
+        },
+        "rules": [
+          "Complementar os modelos existentes com geometria procedural detalhada.",
+          "Não limitar a arquitetura a caixas simples.",
+          "Utilizar modelos como componentes de uma composição maior.",
+          "Unificar escala, materiais e estilo."
+        ]
+      },
+      "pbr_materials": {
+        "provider": "Poly Haven",
+        "path": "public/assets/textures/polyhaven/",
+        "map_count": 56,
+        "material_families": [
+          "blue_metal_plate",
+          "coast_sand_rocks_02",
+          "dark_rock_02",
+          "dry_riverbed_rock",
+          "eucalyptus_bark",
+          "fabric_leather_02",
+          "grass_medium_01",
+          "leather_red_02",
+          "mossy_brick",
+          "moss_01",
+          "stone_brick_wall_001",
+          "weathered_planks",
+          "wood_table",
+          "wood_table_worn"
+        ],
+        "map_types": [
+          "Base color",
+          "Normal",
+          "Roughness",
+          "Displacement",
+          "Alpha"
+        ],
+        "rules": [
+          "Consultar os caminhos exatos no catálogo.",
+          "Usar MeshStandardMaterial ou MeshPhysicalMaterial conforme necessidade.",
+          "Configurar mapas de cor em sRGB.",
+          "Configurar mapas de dados em espaço linear.",
+          "Verificar orientação dos mapas normais.",
+          "Verificar canais dos mapas ORM.",
+          "Verificar mapas alpha antes de aplicar transparência.",
+          "Evitar repetição visual excessiva das texturas.",
+          "Confirmar a procedência dos arquivos locais antes da distribuição definitiva."
+        ]
+      },
+      "fantasy_textures": {
+        "provider": "Kenney",
+        "path": "public/assets/textures/kenney-retro-fantasy/",
+        "license": "CC0 1.0",
+        "usage": [
+          "Portas.",
+          "Janelas.",
+          "Telhados.",
+          "Paredes.",
+          "Pisos.",
+          "Madeira.",
+          "Pedra.",
+          "Elementos medievais."
+        ],
+        "rule": "Utilizar seletivamente, evitando incompatibilidade visual entre texturas retro e materiais estilizados detalhados."
+      },
+      "hdri": {
+        "path": "public/assets/hdri/",
+        "attributed_provider": "ambientCG",
+        "provider_license": "CC0 1.0",
+        "day": "DaySkyHDRI069A_1K",
+        "night": "NightSkyHDRI003_1K",
+        "loaders": [
+          "EXRLoader",
+          "PMREMGenerator"
+        ],
+        "provenance_status": "A procedência dos arquivos locais ainda precisa ser confirmada contra os downloads oficiais.",
+        "rules": [
+          "Usar os arquivos EXR como iluminação ambiental após verificar compatibilidade.",
+          "Criar céu visual coerente com o ambiente.",
+          "Controlar intensidade da iluminação durante o ciclo dia e noite.",
+          "Não declarar a procedência definitivamente verificada sem evidência."
+        ]
+      },
+      "optimized_textures": {
+        "root": "public/assets/optimized/",
+        "desktop": "public/assets/optimized/desktop/",
+        "mobile": "public/assets/optimized/mobile/",
+        "index": "public/assets/optimized/texture-variants.json",
+        "original_textures_processed": 40,
+        "generated_variants": 80,
+        "original_size_mib": 357.39,
+        "desktop_size_mib": 84.43,
+        "mobile_size_mib": 25.77,
+        "desktop_reduction_percent": 76.38,
+        "mobile_reduction_percent": 92.79,
+        "rules": [
+          "Carregar variantes de acordo com o perfil gráfico.",
+          "Não carregar originais e variantes simultaneamente sem necessidade.",
+          "Usar LoadingManager.setURLModifier para dependências externas quando adequado.",
+          "Implementar tratamento específico para texturas embutidas.",
+          "Preservar canais alpha.",
+          "Preservar a interpretação correta de normal maps.",
+          "Não considerar a otimização concluída até verificar as texturas efetivamente carregadas em runtime."
+        ]
+      },
+      "excluded_resources": [
+        {
+          "name": "512.rar",
+          "reason": "Licença das texturas medievais não verificada.",
+          "action": "Não importar nem redistribuir."
+        },
+        {
+          "name": "Fantasy RPG Icon Free Sampler",
+          "reason": "Restrições de redistribuição em repositório público.",
+          "action": "Não importar sem autorização e revisão das condições de uso."
+        }
+      ]
+    },
+    "asset_manager": {
+      "centralized_loading": true,
+      "loading_manager": true,
+      "gltf_loader": true,
+      "texture_loader": true,
+      "exr_loader": true,
+      "model_cache": true,
+      "texture_cache": true,
+      "material_cache": true,
+      "promise_cache": true,
+      "reference_counting": true,
+      "lazy_loading": true,
+      "region_based_loading": true,
+      "progress_reporting": true,
+      "fallback_handling": true,
+      "resource_disposal": true,
+      "skeleton_cloning": "SkeletonUtils.clone",
+      "rules": [
+        "Não realizar carregamentos repetidos do mesmo recurso.",
+        "Não compartilhar materiais mutáveis indiscriminadamente.",
+        "Carregar primeiro os recursos essenciais à região inicial.",
+        "Carregar criaturas e regiões adicionais sob demanda.",
+        "Tratar erros de rede e arquivos ausentes.",
+        "Registrar tempo e tamanho dos carregamentos.",
+        "Não usar a biblioteca completa como preload."
+      ]
+    },
+    "environment_systems": {
+      "vegetation": {
+        "instanced_meshes": true,
+        "deterministic_distribution": true,
+        "tree_variations": true,
+        "grass_variations": true,
+        "flowers": true,
+        "shrubs": true,
+        "wind_animation": true,
+        "slope_based_distribution": true,
+        "distance_based_density": true,
+        "rules": [
+          "Não posicionar árvores dentro de casas.",
+          "Não bloquear caminhos principais.",
+          "Não colocar vegetação terrestre dentro do lago.",
+          "Criar agrupamentos naturais em vez de grades.",
+          "Usar diferentes escalas e rotações.",
+          "Evitar aparência de árvores feitas apenas de cones."
+        ]
+      },
+      "architecture": {
+        "procedural_modular_buildings": true,
+        "foundation": true,
+        "stone_walls": true,
+        "timber_frames": true,
+        "sloped_roofs": true,
+        "doors": true,
+        "windows": true,
+        "chimneys": true,
+        "roof_overhangs": true,
+        "interiors_for_interactive_buildings": true,
+        "building_collision": true,
+        "market_stalls": true,
+        "street_details": true,
+        "rules": [
+          "Construções devem possuir escala humana.",
+          "Evitar casas compostas apenas de cubos com telhados triangulares.",
+          "Criar detalhes estruturais e materiais variados.",
+          "Garantir acesso às construções interativas.",
+          "Não prometer interiores que não foram implementados."
+        ]
+      },
+      "water": {
+        "central_lake": true,
+        "mountain_waterfall": true,
+        "animated_normals": true,
+        "fresnel": true,
+        "depth_based_color": true,
+        "shoreline_foam": true,
+        "waterfall_particles": true,
+        "waterfall_mist": true,
+        "water_surface_reflections": true,
+        "mobile_fallback": true,
+        "rules": [
+          "A cachoeira deve começar em uma origem geográfica plausível.",
+          "Integrar a cachoeira às rochas da montanha.",
+          "Criar fluxo em direção ao lago.",
+          "Evitar planos azuis sem profundidade visual.",
+          "Evitar faixas repetitivas e cortinas de água artificiais.",
+          "Não adicionar cachoeiras aleatórias apenas para decorar a borda da ilha."
+        ]
+      },
+      "sky": {
+        "sky_dome": true,
+        "hdri_environment": true,
+        "cloud_layers": true,
+        "clouds_below_island": true,
+        "clouds_above_horizon": true,
+        "atmospheric_fog": true,
+        "sun": true,
+        "moon": true,
+        "stars": true,
+        "distance_fog": true
+      },
+      "day_night_cycle": {
+        "enabled": true,
+        "configurable_duration": true,
+        "sunrise": true,
+        "daylight": true,
+        "sunset": true,
+        "night": true,
+        "dynamic_sun_position": true,
+        "ambient_light_transition": true,
+        "environment_transition": true,
+        "night_lamps": true,
+        "npc_schedule_integration": true
+      },
+      "weather": {
+        "clear": true,
+        "cloudy": true,
+        "light_rain": true,
+        "fog": true,
+        "performance_adaptive": true
+      }
+    },
+    "player": {
+      "character_creation": {
+        "class_selection": true,
+        "name_selection": true,
+        "appearance_selection": true,
+        "equipment_preview": true
+      },
+      "classes": {
+        "warrior": {
+          "role": "Combate corpo a corpo.",
+          "weapon": "Espada.",
+          "strength": "Resistência e dano físico."
+        },
+        "ranger": {
+          "role": "Combate à distância.",
+          "weapon": "Arco.",
+          "strength": "Precisão e mobilidade."
+        },
+        "rogue": {
+          "role": "Combate rápido.",
+          "weapon": "Adaga.",
+          "strength": "Agilidade e ataques críticos."
+        },
+        "wizard": {
+          "role": "Magia ofensiva.",
+          "weapon": "Cajado.",
+          "strength": "Dano mágico e controle."
+        },
+        "cleric": {
+          "role": "Suporte e magia.",
+          "weapon": "Cajado.",
+          "strength": "Cura e proteção."
+        },
+        "monk": {
+          "role": "Combate desarmado.",
+          "weapon": "Punhos.",
+          "strength": "Velocidade e técnica."
+        }
+      },
+      "attributes": [
+        "Health",
+        "Mana",
+        "Stamina",
+        "Strength",
+        "Dexterity",
+        "Intelligence",
+        "Vitality",
+        "Defense",
+        "CriticalChance",
+        "MovementSpeed"
+      ],
+      "movement": {
+        "third_person": true,
+        "wasd": true,
+        "arrow_keys": true,
+        "click_to_move": true,
+        "tap_to_move": true,
+        "virtual_joystick": true,
+        "walk": true,
+        "run": true,
+        "sprint": true,
+        "jump": true,
+        "dodge": true,
+        "slope_handling": true,
+        "step_handling": true,
+        "ground_detection": true,
+        "pathfinding": true,
+        "smooth_rotation": true,
+        "interaction_range": true
+      },
+      "camera": {
+        "third_person_follow": true,
+        "orbit": true,
+        "zoom": true,
+        "mouse_drag": true,
+        "touch_drag": true,
+        "pinch_zoom": true,
+        "camera_collision": true,
+        "smooth_damping": true,
+        "minimum_pitch_limit": true,
+        "maximum_pitch_limit": true,
+        "camera_recentering": true,
+        "prevent_terrain_clipping": true,
+        "overview_mode": true
+      },
+      "physics": {
+        "engine": "Rapier",
+        "character_controller": true,
+        "capsule_collider": true,
+        "gravity": true,
+        "ground_collision": true,
+        "building_collision": true,
+        "obstacle_collision": true,
+        "fixed_timestep": true,
+        "fall_recovery": true,
+        "safe_respawn": true,
+        "rules": [
+          "O personagem não pode atravessar paredes.",
+          "O personagem não pode atravessar o terreno.",
+          "Não permitir quedas infinitas.",
+          "Evitar colisores complexos desnecessários.",
+          "Manter a posição visual sincronizada com o corpo físico."
+        ]
+      }
+    },
+    "animation_system": {
+      "engine": "Three.js AnimationMixer",
+      "state_machine": true,
+      "crossfade": true,
+      "animation_blending": true,
+      "per_entity_mixer": true,
+      "clip_registry": true,
+      "root_motion_handling": true,
+      "states": [
+        "Idle",
+        "Walk",
+        "Run",
+        "Sprint",
+        "Attack",
+        "Cast",
+        "Dodge",
+        "Hit",
+        "Death",
+        "Interact",
+        "Pickup"
+      ],
+      "verified_class_clip_names": {
+        "Ranger": [
+          "Bow_Draw",
+          "Bow_Shoot",
+          "Death",
+          "Idle",
+          "Idle_Attacking",
+          "Idle_Weapon",
+          "PickUp",
+          "Punch",
+          "RecieveHit",
+          "RecieveHit_2",
+          "Roll",
+          "Run",
+          "Run_Holding",
+          "Walk"
+        ],
+        "Monk": [
+          "Attack",
+          "Attack2",
+          "Death",
+          "Idle",
+          "Idle_Attacking",
+          "PickUp",
+          "RecieveHit",
+          "RecieveHit_2",
+          "Roll",
+          "Run",
+          "Walk"
+        ],
+        "Warrior": [
+          "Death",
+          "Idle",
+          "Idle_Attacking",
+          "Idle_Weapon",
+          "PickUp",
+          "Punch",
+          "RecieveHit",
+          "Roll",
+          "Run",
+          "Run_Weapon",
+          "Sword_Attack",
+          "Sword_Attack2",
+          "Walk"
+        ],
+        "Cleric": [
+          "Death",
+          "Idle",
+          "Idle_Weapon",
+          "PickUp",
+          "Punch",
+          "RecieveHit",
+          "RecieveHit_Attacking",
+          "Run",
+          "Spell1",
+          "Staff_Attack",
+          "Walk"
+        ],
+        "Rogue": [
+          "Attacking_Idle",
+          "Dagger_Attack",
+          "Dagger_Attack2",
+          "Death",
+          "Idle",
+          "PickUp",
+          "Punch",
+          "RecieveHit",
+          "RecieveHit_2",
+          "Roll",
+          "Run",
+          "Walk"
+        ],
+        "Wizard": [
+          "Death",
+          "Idle",
+          "Idle_Attacking",
+          "Idle_Weapon",
+          "PickUp",
+          "Punch",
+          "RecieveHit",
+          "RecieveHit_2",
+          "Roll",
+          "Run",
+          "Run_Weapon",
+          "Spell1",
+          "Spell2",
+          "Staff_Attack",
+          "Walk"
+        ]
+      },
+      "rules": [
+        "Confirmar os nomes dos clips no catálogo e nos modelos carregados.",
+        "Preservar grafias originais, incluindo RecieveHit.",
+        "Criar aliases internos para padronizar estados.",
+        "Não inventar clips ausentes.",
+        "Utilizar alternativas existentes quando uma animação específica não estiver disponível.",
+        "Não deixar personagens em T-pose durante o gameplay.",
+        "Sincronizar ataques com as janelas de impacto.",
+        "Evitar deslizamento excessivo dos pés.",
+        "Testar transições de animação."
+      ]
+    },
+    "npc_system": {
+      "autonomous_behavior": true,
+      "state_machine": true,
+      "navigation": true,
+      "daily_schedule": true,
+      "dialogue": true,
+      "interaction": true,
+      "quest_integration": true,
+      "roles": [
+        "Guild Master",
+        "Blacksmith",
+        "Merchant",
+        "Innkeeper",
+        "Farmer",
+        "Guard",
+        "Villager",
+        "Fisherman",
+        "Herbalist"
+      ],
+      "behavior_states": [
+        "Idle",
+        "Walking",
+        "Working",
+        "Talking",
+        "Resting",
+        "ReturningHome",
+        "Fleeing"
+      ],
+      "rules": [
+        "NPCs devem possuir nome, função e posição inicial.",
+        "NPCs devem reagir à interação do jogador.",
+        "NPCs devem caminhar sem atravessar construções.",
+        "NPCs devem utilizar animações compatíveis.",
+        "Comerciantes devem possuir inventários reais.",
+        "Não usar diálogos sem consequência como substituto de sistemas funcionais."
+      ]
+    },
+    "animal_and_creature_ai": {
+      "finite_state_machine": true,
+      "habitat_system": true,
+      "spawn_manager": true,
+      "despawn_manager": true,
+      "navigation": true,
+      "behavior_states": [
+        "Idle",
+        "Wander",
+        "Graze",
+        "Sleep",
+        "Alert",
+        "Flee",
+        "Chase",
+        "Attack",
+        "Return",
+        "Death"
+      ],
+      "domestic_behavior": [
+        "Permanecer dentro da área designada.",
+        "Caminhar.",
+        "Pastar.",
+        "Descansar.",
+        "Reagir à proximidade do jogador."
+      ],
+      "hostile_behavior": [
+        "Detectar o jogador dentro de uma distância configurável.",
+        "Perseguir.",
+        "Atacar com cooldown.",
+        "Receber dano.",
+        "Retornar ao habitat quando perder o alvo.",
+        "Gerar recompensas ao ser derrotado."
+      ],
+      "boss_behavior": [
+        "Padrões de ataque distintos.",
+        "Ataques com indicação visual.",
+        "Fases de combate.",
+        "Recompensas especiais."
+      ],
+      "rules": [
+        "Não colocar dragões e chefes aleatoriamente na vila.",
+        "Respeitar a progressão do jogador.",
+        "Limitar quantidade de entidades ativas.",
+        "Reduzir frequência de atualização de IA distante."
+      ]
+    },
+    "combat_system": {
+      "real_time": true,
+      "target_selection": true,
+      "melee_combat": true,
+      "ranged_combat": true,
+      "magic_combat": true,
+      "projectiles": true,
+      "hit_detection": true,
+      "damage_calculation": true,
+      "armor_and_resistance": true,
+      "critical_hits": true,
+      "attack_cooldowns": true,
+      "stamina_cost": true,
+      "mana_cost": true,
+      "dodge": true,
+      "blocking_where_applicable": true,
+      "health_bars": true,
+      "damage_feedback": true,
+      "death_and_respawn": true,
+      "loot_drops": true,
+      "rules": [
+        "Ataques devem causar dano real.",
+        "Projéteis devem possuir trajetória e detecção de impacto.",
+        "Evitar dano duplicado no mesmo ataque.",
+        "Impedir ataques sem respeitar cooldown.",
+        "Sincronizar efeitos com animações.",
+        "Garantir combate funcional em dispositivos touch."
+      ]
+    },
+    "progression_system": {
+      "experience": true,
+      "levels": true,
+      "attribute_points": true,
+      "skill_unlocks": true,
+      "class_specific_skills": true,
+      "equipment_progression": true,
+      "quest_rewards": true,
+      "enemy_rewards": true,
+      "configurable_balance": true
+    },
+    "inventory_system": {
+      "grid_inventory": true,
+      "item_stacking": true,
+      "item_definitions": true,
+      "item_instances": true,
+      "drag_and_drop": true,
+      "touch_interaction": true,
+      "equipment_slots": [
+        "Head",
+        "Chest",
+        "Legs",
+        "Feet",
+        "Hands",
+        "MainHand",
+        "OffHand",
+        "Accessory"
+      ],
+      "item_categories": [
+        "Weapons",
+        "Armor",
+        "Consumables",
+        "Materials",
+        "QuestItems",
+        "Tools",
+        "Food"
+      ],
+      "rarities": [
+        "Common",
+        "Uncommon",
+        "Rare",
+        "Epic",
+        "Legendary"
+      ],
+      "actions": [
+        "Equip",
+        "Unequip",
+        "Use",
+        "Move",
+        "SplitStack",
+        "Sell",
+        "Drop"
+      ],
+      "rules": [
+        "O inventário deve armazenar itens reais.",
+        "Equipamentos devem alterar atributos quando apropriado.",
+        "Itens consumíveis devem produzir efeitos reais.",
+        "Impedir duplicação de itens.",
+        "Persistir inventário no salvamento."
+      ]
+    },
+    "economy": {
+      "currency": "Gold",
+      "merchant_inventory": true,
+      "buying": true,
+      "selling": true,
+      "price_configuration": true,
+      "transaction_validation": true,
+      "merchant_categories": [
+        "GeneralGoods",
+        "Weapons",
+        "Armor",
+        "Food",
+        "Materials",
+        "Potions"
+      ],
+      "rules": [
+        "Validar saldo antes de comprar.",
+        "Validar existência e quantidade do item.",
+        "Atualizar saldo e inventário de forma consistente.",
+        "Impedir valores negativos.",
+        "Impedir duplicação por múltiplos cliques."
+      ]
+    },
+    "quest_system": {
+      "quest_registry": true,
+      "quest_log": true,
+      "dialogue_integration": true,
+      "objective_tracking": true,
+      "quest_markers": true,
+      "rewards": true,
+      "prerequisites": true,
+      "persistent_progress": true,
+      "objective_types": [
+        "TalkToNPC",
+        "CollectItem",
+        "DefeatCreature",
+        "VisitLocation",
+        "DeliverItem",
+        "CraftItem",
+        "CatchFish"
+      ],
+      "initial_questline": [
+        {
+          "id": "arrival",
+          "title": "Bem-vindo a Auralis",
+          "objective": "Conhecer a vila e conversar com o mestre da guilda."
+        },
+        {
+          "id": "farm_help",
+          "title": "Problemas na fazenda",
+          "objective": "Conversar com o fazendeiro e ajudá-lo com uma tarefa."
+        },
+        {
+          "id": "forest_resources",
+          "title": "Recursos da floresta",
+          "objective": "Coletar materiais naturais."
+        },
+        {
+          "id": "forest_danger",
+          "title": "Perigo entre as árvores",
+          "objective": "Derrotar criaturas hostis de nível inicial."
+        },
+        {
+          "id": "ancient_tower",
+          "title": "A antiga torre",
+          "objective": "Explorar a torre e descobrir um segredo."
+        },
+        {
+          "id": "mountain_source",
+          "title": "A nascente de Auralis",
+          "objective": "Explorar a região montanhosa e alcançar a origem da cachoeira."
+        }
+      ]
+    },
+    "life_and_survival_systems": {
+      "resource_gathering": {
+        "wood": true,
+        "stone": true,
+        "ore": true,
+        "herbs": true,
+        "flowers": true,
+        "mushrooms": true,
+        "interaction_animation": true,
+        "resource_respawn": true
+      },
+      "crafting": {
+        "recipe_registry": true,
+        "material_requirements": true,
+        "crafting_stations": true,
+        "equipment_crafting": true,
+        "consumable_crafting": true,
+        "transaction_validation": true
+      },
+      "fishing": {
+        "lake_fishing": true,
+        "fishing_rod": true,
+        "cast": true,
+        "bite_detection": true,
+        "catch_mechanic": true,
+        "fish_items": true,
+        "loot_table": true
+      },
+      "farming": {
+        "planting": true,
+        "watering": true,
+        "growth_stages": true,
+        "harvesting": true,
+        "animal_care": true
+      },
+      "building": {
+        "placement_preview": true,
+        "valid_placement_indicator": true,
+        "resource_requirements": true,
+        "collision_validation": true,
+        "rotation": true,
+        "persistent_structures": true,
+        "allowed_building_zones": true,
+        "initial_buildable_objects": [
+          "Campfire",
+          "Fence",
+          "StorageChest",
+          "WoodenPlatform",
+          "SmallShelter"
+        ]
+      }
+    },
+    "user_interface": {
+      "style": "Interface medieval de fantasia, elegante, limpa e funcional.",
+      "language": "Português brasileiro",
+      "main_menu": [
+        "Novo jogo",
+        "Continuar",
+        "Configurações",
+        "Créditos"
+      ],
+      "hud": {
+        "health_bar": true,
+        "mana_bar": true,
+        "stamina_bar": true,
+        "experience_bar": true,
+        "level_indicator": true,
+        "minimap": true,
+        "compass": true,
+        "hotbar": true,
+        "quest_tracker": true,
+        "interaction_prompt": true,
+        "notification_system": true
+      },
+      "screens": [
+        "CharacterCreation",
+        "Inventory",
+        "Equipment",
+        "CharacterStats",
+        "Skills",
+        "QuestLog",
+        "WorldMap",
+        "Merchant",
+        "Crafting",
+        "Dialogue",
+        "Settings",
+        "Pause",
+        "Credits"
+      ],
+      "mobile": {
+        "responsive_layout": true,
+        "virtual_joystick": true,
+        "attack_button": true,
+        "skill_buttons": true,
+        "interact_button": true,
+        "dodge_button": true,
+        "camera_touch_area": true,
+        "safe_area_support": true,
+        "prevent_accidental_page_scroll": true
+      },
+      "accessibility": {
+        "ui_scale": true,
+        "readable_text": true,
+        "keyboard_navigation": true,
+        "volume_controls": true,
+        "reduced_motion_option": true
+      },
+      "rules": [
+        "Não criar botões decorativos sem funcionalidade.",
+        "Não exibir sistemas indisponíveis como concluídos.",
+        "Evitar painéis que ocupem grande parte da tela durante exploração.",
+        "Garantir que menus sejam utilizáveis no Android."
+      ]
+    },
+    "audio_system": {
+      "ambient_wind": true,
+      "waterfall_audio": true,
+      "forest_ambience": true,
+      "footsteps": true,
+      "combat_effects": true,
+      "animal_sounds": true,
+      "ui_sounds": true,
+      "spatial_audio": true,
+      "volume_channels": [
+        "Master",
+        "Music",
+        "Ambience",
+        "Effects"
+      ],
+      "asset_rule": "Não presumir que arquivos de áudio estejam na biblioteca. Usar áudio original, procedural ou com licença verificada. Se indisponível, registrar a pendência sem quebrar o jogo."
+    },
+    "save_system": {
+      "manual_save": true,
+      "autosave": true,
+      "save_slots": true,
+      "schema_version": true,
+      "validation": true,
+      "migration_support": true,
+      "persistent_data": [
+        "PlayerName",
+        "PlayerClass",
+        "Appearance",
+        "Position",
+        "Level",
+        "Experience",
+        "Attributes",
+        "Health",
+        "Mana",
+        "Inventory",
+        "Equipment",
+        "Currency",
+        "QuestProgress",
+        "UnlockedSkills",
+        "WorldTime",
+        "BuiltStructures",
+        "FarmingProgress",
+        "Settings"
+      ],
+      "rules": [
+        "Validar dados antes de carregar.",
+        "Não sobrescrever salvamentos válidos com dados corrompidos.",
+        "Garantir continuidade após fechar e reabrir o navegador.",
+        "Oferecer recuperação segura quando necessário."
+      ]
+    },
+    "graphics_and_performance": {
+      "targets": {
+        "desktop_fps": 60,
+        "mobile_fps": 30,
+        "note": "Metas de desempenho a medir em hardware real, não garantias."
+      },
+      "profiles": {
+        "mobile_low": {
+          "pixel_ratio_cap": 1.0,
+          "shadow_resolution": 512,
+          "texture_profile": "mobile",
+          "vegetation_density": 0.35,
+          "post_processing": false,
+          "water_reflections": "simplified",
+          "dynamic_lights": "minimal",
+          "lod": true
+        },
+        "mobile_high": {
+          "pixel_ratio_cap": 1.25,
+          "shadow_resolution": 1024,
+          "texture_profile": "mobile",
+          "vegetation_density": 0.6,
+          "post_processing": false,
+          "water_reflections": "simplified",
+          "lod": true
+        },
+        "desktop_medium": {
+          "pixel_ratio_cap": 1.5,
+          "shadow_resolution": 1024,
+          "texture_profile": "desktop",
+          "vegetation_density": 0.8,
+          "post_processing": "selective",
+          "water_reflections": "medium",
+          "lod": true
+        },
+        "desktop_high": {
+          "pixel_ratio_cap": 2.0,
+          "shadow_resolution": 2048,
+          "texture_profile": "desktop",
+          "vegetation_density": 1.0,
+          "post_processing": "high",
+          "water_reflections": "high",
+          "lod": true
+        }
+      },
+      "rendering_optimizations": [
+        "InstancedMesh para vegetação e objetos repetidos.",
+        "Frustum culling.",
+        "Distance culling.",
+        "Level of detail.",
+        "Carregamento regional.",
+        "Reutilização de geometria.",
+        "Cache de materiais.",
+        "Cache de texturas.",
+        "Object pooling.",
+        "Limite de luzes dinâmicas.",
+        "Limite de sombras.",
+        "Limite de partículas.",
+        "Redução de frequência da IA distante.",
+        "Descarte correto de recursos GPU.",
+        "Limite de devicePixelRatio.",
+        "Resolução adaptativa quando necessário."
+      ],
+      "rendering_quality": {
+        "tone_mapping": "ACESFilmicToneMapping ou alternativa compatível validada",
+        "color_management": true,
+        "physically_based_materials": true,
+        "directional_sun_light": true,
+        "ambient_environment_light": true,
+        "soft_shadows": true,
+        "selective_bloom": true,
+        "atmospheric_fog": true,
+        "mobile_fallbacks": true
+      },
+      "diagnostics": [
+        "FPS",
+        "FrameTime",
+        "DrawCalls",
+        "Triangles",
+        "Geometries",
+        "Textures",
+        "ActiveEntities",
+        "PhysicsBodies",
+        "LoadedAssets",
+        "AssetLoadingTime"
+      ],
+      "rules": [
+        "Medir desempenho antes de declarar otimização concluída.",
+        "Não carregar os 665.42 MiB no início do jogo.",
+        "Priorizar tempo de carregamento inicial.",
+        "Evitar vazamentos de memória.",
+        "Evitar criar objetos temporários excessivos a cada frame.",
+        "Garantir recuperação ou mensagem adequada em caso de perda do contexto WebGL."
+      ]
+    },
+    "software_architecture": {
+      "principles": [
+        "Separação de responsabilidades.",
+        "Sistemas independentes.",
+        "Configuração orientada a dados.",
+        "TypeScript strict.",
+        "Gerenciamento centralizado de recursos.",
+        "Eventos de gameplay tipados.",
+        "Testabilidade.",
+        "Código modular.",
+        "Ausência de dependências circulares."
+      ],
+      "suggested_structure": {
+        "src/core/": [
+          "Game.ts",
+          "GameLoop.ts",
+          "EventBus.ts",
+          "GameState.ts",
+          "Config.ts"
+        ],
+        "src/rendering/": [
+          "Renderer.ts",
+          "CameraController.ts",
+          "LightingSystem.ts",
+          "GraphicsProfiles.ts",
+          "PostProcessing.ts"
+        ],
+        "src/assets/": [
+          "AssetManager.ts",
+          "AssetRegistry.ts",
+          "TextureVariantManager.ts",
+          "ModelFactory.ts"
+        ],
+        "src/world/": [
+          "WorldManager.ts",
+          "IslandGenerator.ts",
+          "TerrainGenerator.ts",
+          "TerrainMaterial.ts",
+          "RegionManager.ts",
+          "BiomeManager.ts",
+          "PathGenerator.ts",
+          "NavigationSystem.ts"
+        ],
+        "src/environment/": [
+          "VegetationSystem.ts",
+          "BuildingSystem.ts",
+          "WaterSystem.ts",
+          "WaterfallSystem.ts",
+          "SkySystem.ts",
+          "WeatherSystem.ts",
+          "DayNightSystem.ts"
+        ],
+        "src/physics/": [
+          "PhysicsWorld.ts",
+          "ColliderFactory.ts",
+          "CharacterPhysics.ts"
+        ],
+        "src/entities/": [
+          "Entity.ts",
+          "Player.ts",
+          "NPC.ts",
+          "Creature.ts",
+          "Animal.ts",
+          "Interactable.ts"
+        ],
+        "src/animation/": [
+          "AnimationController.ts",
+          "AnimationStateMachine.ts",
+          "AnimationRegistry.ts"
+        ],
+        "src/input/": [
+          "InputManager.ts",
+          "KeyboardInput.ts",
+          "MouseInput.ts",
+          "TouchInput.ts",
+          "VirtualJoystick.ts"
+        ],
+        "src/ai/": [
+          "NPCBehavior.ts",
+          "AnimalBehavior.ts",
+          "EnemyBehavior.ts",
+          "BossBehavior.ts",
+          "SpawnManager.ts"
+        ],
+        "src/gameplay/": [
+          "CombatSystem.ts",
+          "DamageSystem.ts",
+          "SkillSystem.ts",
+          "ProgressionSystem.ts",
+          "InteractionSystem.ts",
+          "InventorySystem.ts",
+          "EquipmentSystem.ts",
+          "EconomySystem.ts",
+          "QuestSystem.ts",
+          "DialogueSystem.ts",
+          "GatheringSystem.ts",
+          "CraftingSystem.ts",
+          "FishingSystem.ts",
+          "FarmingSystem.ts",
+          "ConstructionSystem.ts"
+        ],
+        "src/data/": [
+          "Classes.ts",
+          "Items.ts",
+          "Skills.ts",
+          "Quests.ts",
+          "NPCDefinitions.ts",
+          "CreatureDefinitions.ts",
+          "Recipes.ts",
+          "LootTables.ts"
+        ],
+        "src/ui/": [
+          "UIManager.ts",
+          "HUD.ts",
+          "MainMenu.ts",
+          "CharacterCreation.ts",
+          "InventoryUI.ts",
+          "QuestUI.ts",
+          "DialogueUI.ts",
+          "MerchantUI.ts",
+          "SettingsUI.ts",
+          "Minimap.ts",
+          "MobileControls.ts"
+        ],
+        "src/audio/": [
+          "AudioManager.ts",
+          "SpatialAudio.ts"
+        ],
+        "src/storage/": [
+          "SaveManager.ts",
+          "SaveSchema.ts",
+          "SaveMigration.ts"
+        ],
+        "src/debug/": [
+          "PerformanceMonitor.ts",
+          "DebugPanel.ts",
+          "WorldInspector.ts"
+        ],
+        "tests/": [
+          "unit/",
+          "integration/",
+          "e2e/"
+        ]
+      },
+      "structure_rule": "A estrutura é uma referência arquitetural. Ajustar quando necessário, sem concentrar todo o jogo em um único arquivo."
+    },
+    "implementation_phases": [
+      {
+        "phase": 0,
+        "name": "Preparação e auditoria",
+        "tasks": [
+          "Verificar Git.",
+          "Criar branch de desenvolvimento.",
+          "Ler catálogo, guia e créditos.",
+          "Validar caminhos dos recursos.",
+          "Configurar TypeScript, Vite, Three.js e Rapier.",
+          "Criar estrutura modular."
+        ],
+        "exit_criteria": [
+          "Projeto compila.",
+          "Servidor de desenvolvimento funciona.",
+          "Biblioteca permanece preservada.",
+          "Branch main permanece intacta."
+        ]
+      },
+      {
+        "phase": 1,
+        "name": "Fundação geográfica",
+        "tasks": [
+          "Gerar formato orgânico da ilha.",
+          "Criar massa rochosa inferior.",
+          "Gerar relevo.",
+          "Definir montanhas.",
+          "Definir lago.",
+          "Definir regiões.",
+          "Criar caminhos principais.",
+          "Criar colisão do terreno."
+        ],
+        "exit_criteria": [
+          "Ilha possui silhueta natural.",
+          "Distribuição geográfica corresponde ao desenho.",
+          "Não possui aparência de disco ou cone.",
+          "Áreas principais são acessíveis.",
+          "Capturas aéreas e ao nível do solo são revisadas."
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Ambiente natural",
+        "tasks": [
+          "Aplicar materiais PBR.",
+          "Criar floresta.",
+          "Distribuir vegetação.",
+          "Criar lago.",
+          "Criar cachoeira.",
+          "Criar céu e nuvens.",
+          "Configurar iluminação.",
+          "Implementar ciclo dia e noite."
+        ],
+        "exit_criteria": [
+          "Ambiente possui composição coerente.",
+          "Água apresenta movimento e integração geográfica.",
+          "Vegetação não bloqueia caminhos.",
+          "Iluminação é adequada para exploração."
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Vila, fazenda e torre",
+        "tasks": [
+          "Construir vila medieval.",
+          "Criar praça e comércio.",
+          "Criar fazenda.",
+          "Criar cercados.",
+          "Construir torre.",
+          "Criar interiores prioritários.",
+          "Adicionar detalhes ambientais."
+        ],
+        "exit_criteria": [
+          "Arquitetura possui escala humana.",
+          "Construções não parecem caixas primitivas.",
+          "Regiões estão conectadas.",
+          "Colisões estão funcionais."
+        ]
+      },
+      {
+        "phase": 4,
+        "name": "Personagem jogável",
+        "tasks": [
+          "Integrar as seis classes.",
+          "Implementar seleção de personagem.",
+          "Implementar física.",
+          "Implementar movimento.",
+          "Implementar câmera.",
+          "Implementar animações.",
+          "Implementar controles touch."
+        ],
+        "exit_criteria": [
+          "Jogador consegue explorar a ilha.",
+          "Movimento por teclado e clique funciona.",
+          "Movimento por toque funciona.",
+          "Personagem não permanece em T-pose.",
+          "Colisões e câmera funcionam."
+        ]
+      },
+      {
+        "phase": 5,
+        "name": "Habitantes e criaturas",
+        "tasks": [
+          "Integrar NPCs.",
+          "Integrar animais domésticos.",
+          "Implementar rotinas.",
+          "Implementar navegação.",
+          "Implementar criaturas hostis.",
+          "Implementar spawn e despawn."
+        ],
+        "exit_criteria": [
+          "NPCs possuem comportamento.",
+          "Ovelhas caminham e pastam.",
+          "Criaturas utilizam animações.",
+          "Entidades não atravessam obstáculos."
+        ]
+      },
+      {
+        "phase": 6,
+        "name": "Combate e progressão",
+        "tasks": [
+          "Implementar atributos.",
+          "Implementar combate.",
+          "Integrar armas.",
+          "Implementar habilidades.",
+          "Implementar dano.",
+          "Implementar experiência.",
+          "Implementar níveis.",
+          "Implementar loot."
+        ],
+        "exit_criteria": [
+          "Combate causa dano real.",
+          "Criaturas reagem e atacam.",
+          "Jogador recebe recompensas.",
+          "Progressão altera atributos."
+        ]
+      },
+      {
+        "phase": 7,
+        "name": "Inventário, comércio e missões",
+        "tasks": [
+          "Implementar inventário.",
+          "Implementar equipamentos.",
+          "Implementar economia.",
+          "Implementar comerciantes.",
+          "Implementar diálogos.",
+          "Implementar missões.",
+          "Implementar recompensas."
+        ],
+        "exit_criteria": [
+          "Itens são persistentes.",
+          "Compra e venda funcionam.",
+          "Equipamentos alteram atributos.",
+          "Missões podem ser concluídas."
+        ]
+      },
+      {
+        "phase": 8,
+        "name": "Sistemas de vida e exploração",
+        "tasks": [
+          "Implementar coleta.",
+          "Implementar crafting.",
+          "Implementar pesca.",
+          "Implementar agricultura.",
+          "Implementar construção.",
+          "Integrar sistemas ao inventário."
+        ],
+        "exit_criteria": [
+          "Recursos podem ser coletados.",
+          "Receitas consomem materiais.",
+          "Pesca gera itens.",
+          "Plantações possuem crescimento.",
+          "Construções válidas são persistentes."
+        ]
+      },
+      {
+        "phase": 9,
+        "name": "Interface, áudio e salvamento",
+        "tasks": [
+          "Finalizar HUD.",
+          "Finalizar menus.",
+          "Implementar minimapa.",
+          "Implementar configurações.",
+          "Integrar áudio autorizado.",
+          "Implementar salvamento.",
+          "Implementar carregamento."
+        ],
+        "exit_criteria": [
+          "Menus funcionam.",
+          "Interface é responsiva.",
+          "Jogo pode ser salvo.",
+          "Progresso pode ser recuperado."
+        ]
+      },
+      {
+        "phase": 10,
+        "name": "Otimização e qualidade final",
+        "tasks": [
+          "Medir desempenho.",
+          "Validar texturas desktop e mobile.",
+          "Otimizar draw calls.",
+          "Otimizar memória.",
+          "Testar desktop.",
+          "Testar Android.",
+          "Corrigir problemas.",
+          "Executar build de produção.",
+          "Atualizar documentação."
+        ],
+        "exit_criteria": [
+          "Build de produção funciona.",
+          "Não existem erros críticos no console.",
+          "Não existem recursos essenciais ausentes.",
+          "Testes automatizados relevantes passam.",
+          "Desempenho foi medido e documentado.",
+          "Critérios visuais foram revisados."
+        ]
+      }
+    ],
+    "testing_strategy": {
+      "unit_tests": [
+        "Damage calculation",
+        "Inventory transactions",
+        "Equipment modifiers",
+        "Economy transactions",
+        "Quest progression",
+        "Crafting requirements",
+        "Save validation"
+      ],
+      "integration_tests": [
+        "Asset loading",
+        "Player movement",
+        "Physics collision",
+        "Animation transitions",
+        "NPC interaction",
+        "Combat and loot",
+        "Buying and selling",
+        "Save and reload"
+      ],
+      "visual_tests": [
+        "Vista aérea completa da ilha.",
+        "Vista lateral da massa rochosa inferior.",
+        "Exploração da vila ao nível do jogador.",
+        "Campo de ovelhas.",
+        "Torre medieval.",
+        "Lago central.",
+        "Floresta.",
+        "Montanhas.",
+        "Cachoeira.",
+        "Iluminação diurna.",
+        "Iluminação noturna.",
+        "Interface desktop.",
+        "Interface mobile."
+      ],
+      "mobile_tests": [
+        "Carregamento inicial.",
+        "Controles por toque.",
+        "Movimento.",
+        "Rotação de câmera.",
+        "Zoom.",
+        "Combate.",
+        "Inventário.",
+        "Diálogos.",
+        "Salvamento.",
+        "Desempenho."
+      ],
+      "rules": [
+        "Executar testes após cada fase.",
+        "Registrar falhas reais.",
+        "Não inventar resultados de testes.",
+        "Distinguir emulação mobile de teste em aparelho Android real.",
+        "Não considerar um sistema concluído apenas porque seu código existe.",
+        "Validar o comportamento efetivamente executado."
+      ]
+    },
+    "previous_version_failures_to_avoid": [
+      "Ilha com aparência de maquete.",
+      "Borda circular artificial.",
+      "Massa inferior em formato de cone liso.",
+      "Montanhas piramidais.",
+      "Terreno excessivamente plano.",
+      "Vegetação pequena e repetitiva.",
+      "Árvores com aparência geométrica primitiva.",
+      "Construções sem detalhes.",
+      "Escala incoerente entre personagens e ambiente.",
+      "Água com linhas repetitivas.",
+      "Cachoeiras desconectadas da geografia.",
+      "Céu sem profundidade.",
+      "Personagens aparentemente em T-pose.",
+      "Interfaces que não representam gameplay funcional.",
+      "Falta de validação prática dos sistemas.",
+      "Carregamento desnecessário de recursos."
+    ],
+    "quality_gates": {
+      "geography": "A ilha deve parecer uma formação natural flutuante.",
+      "scale": "O jogador deve sentir que está explorando um mundo e não uma miniatura.",
+      "architecture": "A vila deve possuir detalhes, identidade e proporções coerentes.",
+      "water": "O lago e a cachoeira devem apresentar movimento e integração ambiental.",
+      "animation": "Personagens e criaturas devem apresentar animações funcionais.",
+      "physics": "O jogador deve interagir corretamente com terreno e obstáculos.",
+      "gameplay": "Os sistemas implementados devem produzir consequências reais.",
+      "performance": "Os perfis gráficos devem ser testados e medidos.",
+      "licensing": "Todos os recursos utilizados devem possuir autorização compatível.",
+      "mobile": "O jogo deve possuir controles e interface adequados para Android.",
+      "stability": "O jogo deve iniciar, executar e salvar sem erros críticos."
+    },
+    "deliverables": [
+      "Código-fonte completo.",
+      "Projeto TypeScript e Vite funcional.",
+      "Branch rebuild/auralis-v10.",
+      "Biblioteca de recursos preservada.",
+      "Ilha principal explorável.",
+      "Sistemas de gameplay implementados e testados.",
+      "Configurações gráficas desktop e mobile.",
+      "Documentação de arquitetura.",
+      "README com instruções de execução.",
+      "Documentação dos controles.",
+      "Documentação dos sistemas.",
+      "Créditos e licenças.",
+      "Relatório de testes.",
+      "Relatório de desempenho.",
+      "Capturas reais do jogo.",
+      "Build de produção."
+    ],
+    "execution_policy": {
+      "autonomous_execution": true,
+      "continue_between_phases": true,
+      "review_each_phase": true,
+      "stop_conditions": [
+        "Risco de perda de dados.",
+        "Conflito Git não resolvido.",
+        "Necessidade de credenciais.",
+        "Licença incompatível.",
+        "Erro crítico que impeça continuar com segurança."
+      ],
+      "rules": [
+        "Não entregar somente planejamento.",
+        "Criar e editar os arquivos necessários.",
+        "Instalar dependências compatíveis.",
+        "Executar o projeto.",
+        "Inspecionar o resultado visual.",
+        "Corrigir erros encontrados.",
+        "Não esconder funcionalidades incompletas.",
+        "Não marcar tarefas como concluídas sem evidência.",
+        "Não substituir sistemas complexos por interfaces decorativas.",
+        "Quando um recurso estiver ausente, utilizar alternativa autorizada ou registrar a limitação.",
+        "Priorizar um núcleo jogável de alta qualidade antes de expandir o escopo.",
+        "Não sacrificar a fundação geográfica para implementar rapidamente sistemas secundários.",
+        "Não realizar publicação definitiva sem revisar licenças e testes."
+      ]
+    },
+    "final_instruction": "Comece agora pela auditoria do repositório e pela preparação da nova branch. Leia o catálogo de recursos, o guia técnico e os créditos. Construa uma nova arquitetura independente das versões anteriores. Desenvolva primeiro a geografia da ilha e sua qualidade visual. Em seguida implemente exploração, personagem, física, animações, NPCs, criaturas e os demais sistemas de RPG. Utilize os recursos já publicados sempre que forem adequados. Execute e teste cada etapa. Continue progressivamente até entregar um jogo funcional, visualmente coerente, otimizado e preparado para desktop e Android. Caso algum requisito não possa ser concluído, documente a limitação de forma explícita. O objetivo é criar Auralis RPG V10 como um jogo de verdade, não uma maquete, não uma demonstração estática e não uma repetição da V9."
+  }
+}
