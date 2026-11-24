@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat_two_sided.gdshader" id="1_c3a74"]
+[ext_resource type="Texture2D" path="res://beasts/Dragon/T_DragonWing_Ash.png" id="2_x8w35"]
+[ext_resource type="Texture2D" path="res://beasts/Dragon/T_DragonWing_Normal.png" id="3_tmns7"]
+
+[resource]
+resource_name = "WingAsh"
+render_priority = 0
+shader = ExtResource("1_c3a74")
+shader_parameter/coat = ExtResource("2_x8w35")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = true
+shader_parameter/normal_map = ExtResource("3_tmns7")
+shader_parameter/normal_scale = 0.8

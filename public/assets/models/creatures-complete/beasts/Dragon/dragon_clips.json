@@ -1,0 +1,160 @@
+{
+ "clips": [
+  {
+   "name": "Idle",
+   "frames": 120,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Walk",
+   "frames": 48,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Run",
+   "frames": 24,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Bite",
+   "frames": 42,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.63
+    }
+   ]
+  },
+  {
+   "name": "Claw",
+   "frames": 36,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.53
+    }
+   ]
+  },
+  {
+   "name": "TailSweep",
+   "frames": 54,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.8
+    }
+   ]
+  },
+  {
+   "name": "Fire",
+   "frames": 75,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Fire",
+     "time": 0.9
+    },
+    {
+     "name": "FireEnd",
+     "time": 2.0
+    }
+   ]
+  },
+  {
+   "name": "Roar",
+   "frames": 66,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Roar",
+     "time": 0.6
+    }
+   ]
+  },
+  {
+   "name": "Hit",
+   "frames": 18,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Death",
+   "frames": 90,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 2.0
+    }
+   ]
+  },
+  {
+   "name": "Takeoff",
+   "frames": 66,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": true,
+   "events": [
+    {
+     "name": "TakeOff",
+     "time": 0.63
+    }
+   ]
+  },
+  {
+   "name": "Fly",
+   "frames": 36,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Glide",
+   "frames": 60,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Land",
+   "frames": 72,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": true,
+   "events": [
+    {
+     "name": "Land",
+     "time": 1.4
+    }
+   ]
+  }
+ ]
+}

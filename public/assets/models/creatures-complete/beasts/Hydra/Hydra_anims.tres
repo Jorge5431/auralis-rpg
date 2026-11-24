@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_d3l1a"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_kstn8"]
+
+[sub_resource type="Resource" id="Resource_s8bm5"]
+script = ExtResource("1_d3l1a")
+name = "Idle"
+weight = 2.0
+clips = PackedStringArray("Idle")
+hold = Vector2(4, 8)
+
+[sub_resource type="Resource" id="Resource_ax1p5"]
+script = ExtResource("1_d3l1a")
+name = "Walk"
+weight = 2.0
+clips = PackedStringArray("Walk")
+moves = true
+hold = Vector2(4, 8)
+
+[sub_resource type="Resource" id="Resource_7mp70"]
+script = ExtResource("1_d3l1a")
+name = "Run"
+weight = 0.6
+clips = PackedStringArray("Run")
+moves = true
+hold = Vector2(2, 4)
+
+[sub_resource type="Resource" id="Resource_xu7gi"]
+script = ExtResource("1_d3l1a")
+name = "Bite"
+clips = PackedStringArray("Bite")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_web00"]
+script = ExtResource("1_d3l1a")
+name = "TripleBite"
+weight = 0.8
+clips = PackedStringArray("TripleBite")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_a5lpp"]
+script = ExtResource("1_d3l1a")
+name = "TailSweep"
+weight = 0.5
+clips = PackedStringArray("TailSweep")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_706st"]
+script = ExtResource("1_d3l1a")
+name = "Roar"
+weight = 0.5
+clips = PackedStringArray("Roar")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_lekxp"]
+script = ExtResource("1_d3l1a")
+name = "Hit"
+weight = 0.3
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_ol527"]
+script = ExtResource("1_d3l1a")
+name = "Death"
+weight = 0.12
+clips = PackedStringArray("Death")
+hold_after = 2.5
+next = "Idle"
+
+[resource]
+script = ExtResource("2_kstn8")
+pools = Array[ExtResource("1_d3l1a")]([SubResource("Resource_s8bm5"), SubResource("Resource_ax1p5"), SubResource("Resource_7mp70"), SubResource("Resource_xu7gi"), SubResource("Resource_web00"), SubResource("Resource_a5lpp"), SubResource("Resource_706st"), SubResource("Resource_lekxp"), SubResource("Resource_ol527")])

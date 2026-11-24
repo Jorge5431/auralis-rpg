@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_rda4a"]
+[ext_resource type="Texture2D" path="res://beasts/Bear/T_Bear_Old.png" id="2_os3ly"]
+
+[resource]
+resource_name = "Old"
+render_priority = 0
+shader = ExtResource("1_rda4a")
+shader_parameter/coat = ExtResource("2_os3ly")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = null
+shader_parameter/normal_scale = null

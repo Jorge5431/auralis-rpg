@@ -1,0 +1,144 @@
+{
+ "clips": [
+  {
+   "name": "Idle",
+   "frames": 90,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Crawl",
+   "frames": 60,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Lash",
+   "frames": 40,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Hit",
+     "time": 0.6666666666666666
+    }
+   ]
+  },
+  {
+   "name": "Grab",
+   "frames": 44,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Hit",
+     "time": 0.6
+    }
+   ]
+  },
+  {
+   "name": "Engulf",
+   "frames": 80,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Grab",
+     "time": 0.7333333333333333
+    },
+    {
+     "name": "Engulf",
+     "time": 1.5333333333333334
+    }
+   ]
+  },
+  {
+   "name": "Spit",
+   "frames": 44,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Spit",
+     "time": 0.7
+    }
+   ]
+  },
+  {
+   "name": "Hit",
+   "frames": 24,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Hurt",
+     "time": 0.06666666666666667
+    }
+   ]
+  },
+  {
+   "name": "Death",
+   "frames": 70,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 1.8666666666666667
+    }
+   ]
+  },
+  {
+   "name": "Puddle",
+   "frames": 90,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Rise",
+   "frames": 50,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Risen",
+     "time": 1.0
+    }
+   ]
+  },
+  {
+   "name": "Split",
+   "frames": 75,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Split",
+     "time": 1.9333333333333333
+    }
+   ]
+  },
+  {
+   "name": "Reform",
+   "frames": 50,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  }
+ ]
+}

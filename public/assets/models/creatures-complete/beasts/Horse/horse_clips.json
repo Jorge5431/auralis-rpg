@@ -1,0 +1,97 @@
+{
+ "clips": [
+  {
+   "name": "Idle",
+   "frames": 131,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Graze",
+   "frames": 164,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Alert",
+   "frames": 49,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Call",
+   "frames": 49,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Walk",
+   "frames": 39,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Trot",
+   "frames": 22,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Run",
+   "frames": 15,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Hit",
+   "frames": 16,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Death",
+   "frames": 72,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 2.081345718519631
+    }
+   ]
+  },
+  {
+   "name": "Sleep",
+   "frames": 131,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Wake",
+   "frames": 66,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  }
+ ]
+}

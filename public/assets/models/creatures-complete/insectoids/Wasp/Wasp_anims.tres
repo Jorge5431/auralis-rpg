@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_bbmg6"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_aklc5"]
+
+[sub_resource type="Resource" id="Resource_65n1n"]
+script = ExtResource("1_bbmg6")
+name = "Idle"
+weight = 2.0
+clips = PackedStringArray("Idle")
+hold = Vector2(2, 4)
+
+[sub_resource type="Resource" id="Resource_b480s"]
+script = ExtResource("1_bbmg6")
+name = "Fly"
+weight = 2.4
+clips = PackedStringArray("Fly")
+moves = true
+
+[sub_resource type="Resource" id="Resource_j74cp"]
+script = ExtResource("1_bbmg6")
+name = "Threat"
+weight = 0.8
+clips = PackedStringArray("Threat")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_6kjn6"]
+script = ExtResource("1_bbmg6")
+name = "Sting"
+weight = 1.4
+clips = PackedStringArray("Sting")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_ns6bu"]
+script = ExtResource("1_bbmg6")
+name = "Dive"
+clips = PackedStringArray("Dive")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_x1rmb"]
+script = ExtResource("1_bbmg6")
+name = "Hit"
+weight = 0.6
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_unpem"]
+script = ExtResource("1_bbmg6")
+name = "Death"
+weight = 0.3
+clips = PackedStringArray("Death")
+hold_after = 2.0
+next = "GetUp"
+
+[sub_resource type="Resource" id="Resource_ev4yk"]
+script = ExtResource("1_bbmg6")
+name = "GetUp"
+weight = 0.0
+clips = PackedStringArray("GetUp")
+next = "Idle"
+
+[resource]
+script = ExtResource("2_aklc5")
+pools = Array[ExtResource("1_bbmg6")]([SubResource("Resource_65n1n"), SubResource("Resource_b480s"), SubResource("Resource_j74cp"), SubResource("Resource_6kjn6"), SubResource("Resource_ns6bu"), SubResource("Resource_x1rmb"), SubResource("Resource_unpem"), SubResource("Resource_ev4yk")])

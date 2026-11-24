@@ -1,0 +1,120 @@
+{
+ "clips": [
+  {
+   "name": "Idle",
+   "frames": 120,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "IdlePant",
+   "frames": 90,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Walk",
+   "frames": 24,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Trot",
+   "frames": 16,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Run",
+   "frames": 12,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Bite",
+   "frames": 33,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.47
+    }
+   ]
+  },
+  {
+   "name": "Lunge",
+   "frames": 45,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": true,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.87
+    }
+   ]
+  },
+  {
+   "name": "Threat",
+   "frames": 72,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Howl",
+   "frames": 105,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Howl",
+     "time": 0.8
+    }
+   ]
+  },
+  {
+   "name": "Hit",
+   "frames": 15,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Death",
+   "frames": 66,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 1.9
+    }
+   ]
+  },
+  {
+   "name": "GetUp",
+   "frames": 45,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  }
+ ]
+}

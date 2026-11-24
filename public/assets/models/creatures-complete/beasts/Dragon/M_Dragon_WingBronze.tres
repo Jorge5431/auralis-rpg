@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat_two_sided.gdshader" id="1_mbdrb"]
+[ext_resource type="Texture2D" path="res://beasts/Dragon/T_DragonWing_Bronze.png" id="2_4ywlm"]
+[ext_resource type="Texture2D" path="res://beasts/Dragon/T_DragonWing_Normal.png" id="3_iarrg"]
+
+[resource]
+resource_name = "WingBronze"
+render_priority = 0
+shader = ExtResource("1_mbdrb")
+shader_parameter/coat = ExtResource("2_4ywlm")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = true
+shader_parameter/normal_map = ExtResource("3_iarrg")
+shader_parameter/normal_scale = 0.8

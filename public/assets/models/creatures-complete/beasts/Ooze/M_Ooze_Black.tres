@@ -1,0 +1,42 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/ooze/ooze_jelly_near.gdshader" id="1_rpwgi"]
+[ext_resource type="Texture2D" path="res://beasts/Ooze/T_Ooze.png" id="2_6vj4g"]
+[ext_resource type="Shader" path="res://addons/beasts/ooze/ooze_jelly_far.gdshader" id="3_2lv8k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2g7gh"]
+resource_name = "Black"
+render_priority = 0
+shader = ExtResource("1_rpwgi")
+shader_parameter/masks = ExtResource("2_6vj4g")
+shader_parameter/thin_color = Color(0.36078432, 0.30588236, 0.38431373, 1)
+shader_parameter/mid_color = Color(0.16470589, 0.13333334, 0.19215687, 1)
+shader_parameter/core_color = Color(0.07450981, 0.05882353, 0.09019608, 1)
+shader_parameter/crevice_color = Color(0.023529412, 0.015686275, 0.03137255, 1)
+shader_parameter/fresnel = null
+shader_parameter/fresnel_power = null
+shader_parameter/smoothness = null
+shader_parameter/glow = null
+shader_parameter/back_fade = null
+shader_parameter/wobble = null
+shader_parameter/wobble_speed = null
+shader_parameter/opacity = 1.45
+
+[resource]
+resource_name = "Black"
+render_priority = -1
+next_pass = SubResource("ShaderMaterial_2g7gh")
+shader = ExtResource("3_2lv8k")
+shader_parameter/masks = ExtResource("2_6vj4g")
+shader_parameter/thin_color = Color(0.36078432, 0.30588236, 0.38431373, 1)
+shader_parameter/mid_color = Color(0.16470589, 0.13333334, 0.19215687, 1)
+shader_parameter/core_color = Color(0.07450981, 0.05882353, 0.09019608, 1)
+shader_parameter/crevice_color = Color(0.023529412, 0.015686275, 0.03137255, 1)
+shader_parameter/fresnel = null
+shader_parameter/fresnel_power = null
+shader_parameter/smoothness = null
+shader_parameter/glow = null
+shader_parameter/back_fade = null
+shader_parameter/wobble = null
+shader_parameter/wobble_speed = null
+shader_parameter/opacity = 1.45

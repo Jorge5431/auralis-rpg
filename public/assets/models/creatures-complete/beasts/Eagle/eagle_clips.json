@@ -1,0 +1,99 @@
+{
+ "clips": [
+  {
+   "name": "Idle",
+   "frames": 180,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Walk",
+   "frames": 40,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "TakeOff",
+   "frames": 60,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Fly",
+   "frames": 24,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Glide",
+   "frames": 90,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Dive",
+   "frames": 78,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": true,
+   "events": [
+    {
+     "name": "Strike",
+     "time": 1.2666666666666666
+    }
+   ]
+  },
+  {
+   "name": "Land",
+   "frames": 66,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Screech",
+   "frames": 60,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Screech",
+     "time": 0.5333333333333333
+    }
+   ]
+  },
+  {
+   "name": "Hit",
+   "frames": 18,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Death",
+   "frames": 75,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 1.0
+    }
+   ]
+  }
+ ]
+}

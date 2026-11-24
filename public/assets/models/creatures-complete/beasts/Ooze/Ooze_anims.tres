@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_gx13f"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_jjrq1"]
+
+[sub_resource type="Resource" id="Resource_hlojj"]
+script = ExtResource("1_gx13f")
+name = "Idle"
+weight = 1.5
+clips = PackedStringArray("Idle")
+
+[sub_resource type="Resource" id="Resource_yguva"]
+script = ExtResource("1_gx13f")
+name = "Crawl"
+weight = 2.5
+clips = PackedStringArray("Crawl")
+moves = true
+hold = Vector2(4, 8)
+
+[sub_resource type="Resource" id="Resource_hjseq"]
+script = ExtResource("1_gx13f")
+name = "Lash"
+weight = 0.4
+clips = PackedStringArray("Lash")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_kfr67"]
+script = ExtResource("1_gx13f")
+name = "Grab"
+weight = 0.4
+clips = PackedStringArray("Grab")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_7wavk"]
+script = ExtResource("1_gx13f")
+name = "Spit"
+weight = 0.4
+clips = PackedStringArray("Spit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_fmo4n"]
+script = ExtResource("1_gx13f")
+name = "Engulf"
+weight = 0.3
+clips = PackedStringArray("Engulf")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_o1cj3"]
+script = ExtResource("1_gx13f")
+name = "Hit"
+weight = 0.3
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_13lbt"]
+script = ExtResource("1_gx13f")
+name = "Puddle"
+weight = 0.4
+clips = PackedStringArray("Puddle")
+hold = Vector2(4, 8)
+next = "Rise"
+
+[sub_resource type="Resource" id="Resource_mqql2"]
+script = ExtResource("1_gx13f")
+name = "Rise"
+weight = 0.0
+clips = PackedStringArray("Rise")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_t26gi"]
+script = ExtResource("1_gx13f")
+name = "Death"
+weight = 0.15
+clips = PackedStringArray("Death")
+hold_after = 2.5
+next = "Rise"
+
+[sub_resource type="Resource" id="Resource_oqyev"]
+script = ExtResource("1_gx13f")
+name = "Reform"
+weight = 0.0
+clips = PackedStringArray("Reform")
+next = "Idle"
+
+[resource]
+script = ExtResource("2_jjrq1")
+pools = Array[ExtResource("1_gx13f")]([SubResource("Resource_hlojj"), SubResource("Resource_yguva"), SubResource("Resource_hjseq"), SubResource("Resource_kfr67"), SubResource("Resource_7wavk"), SubResource("Resource_fmo4n"), SubResource("Resource_o1cj3"), SubResource("Resource_13lbt"), SubResource("Resource_mqql2"), SubResource("Resource_t26gi"), SubResource("Resource_oqyev")])

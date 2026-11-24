@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_a4u27"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_fqrao"]
+
+[sub_resource type="Resource" id="Resource_8mlc2"]
+script = ExtResource("1_a4u27")
+name = "Idle"
+weight = 2.0
+clips = PackedStringArray("Idle")
+hold = Vector2(2, 4)
+
+[sub_resource type="Resource" id="Resource_dxwia"]
+script = ExtResource("1_a4u27")
+name = "Walk"
+weight = 2.2
+clips = PackedStringArray("Walk")
+moves = true
+
+[sub_resource type="Resource" id="Resource_oqfgq"]
+script = ExtResource("1_a4u27")
+name = "Run"
+weight = 0.8
+clips = PackedStringArray("Run")
+moves = true
+hold = Vector2(1.5, 3)
+
+[sub_resource type="Resource" id="Resource_1l2il"]
+script = ExtResource("1_a4u27")
+name = "Threat"
+weight = 0.8
+clips = PackedStringArray("Threat")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_exyai"]
+script = ExtResource("1_a4u27")
+name = "Bite"
+weight = 1.3
+clips = PackedStringArray("Bite")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_yrgao"]
+script = ExtResource("1_a4u27")
+name = "Burrow"
+weight = 0.6
+clips = PackedStringArray("Burrow")
+hold_after = 1.5
+next = "Emerge"
+relocate = Vector2(3, 8)
+
+[sub_resource type="Resource" id="Resource_aldda"]
+script = ExtResource("1_a4u27")
+name = "Emerge"
+weight = 0.0
+clips = PackedStringArray("Emerge")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_erlee"]
+script = ExtResource("1_a4u27")
+name = "Hit"
+weight = 0.5
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_bty00"]
+script = ExtResource("1_a4u27")
+name = "Death"
+weight = 0.3
+clips = PackedStringArray("Death")
+hold_after = 2.0
+next = "GetUp"
+
+[sub_resource type="Resource" id="Resource_epmor"]
+script = ExtResource("1_a4u27")
+name = "GetUp"
+weight = 0.0
+clips = PackedStringArray("GetUp")
+next = "Idle"
+
+[resource]
+script = ExtResource("2_fqrao")
+pools = Array[ExtResource("1_a4u27")]([SubResource("Resource_8mlc2"), SubResource("Resource_dxwia"), SubResource("Resource_oqfgq"), SubResource("Resource_1l2il"), SubResource("Resource_exyai"), SubResource("Resource_yrgao"), SubResource("Resource_aldda"), SubResource("Resource_erlee"), SubResource("Resource_bty00"), SubResource("Resource_epmor")])

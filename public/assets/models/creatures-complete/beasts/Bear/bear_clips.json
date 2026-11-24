@@ -1,0 +1,143 @@
+{
+ "clips": [
+  {
+   "name": "Sleep",
+   "frames": 90,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Wake",
+   "frames": 45,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Idle",
+   "frames": 90,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Walk",
+   "frames": 32,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Run",
+   "frames": 13,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Swipe",
+   "frames": 30,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.42
+    }
+   ]
+  },
+  {
+   "name": "Bite",
+   "frames": 30,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.4
+    }
+   ]
+  },
+  {
+   "name": "Slam",
+   "frames": 42,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.77
+    }
+   ]
+  },
+  {
+   "name": "Hug",
+   "frames": 60,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.73
+    }
+   ]
+  },
+  {
+   "name": "Rear",
+   "frames": 81,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Roar",
+     "time": 0.9
+    }
+   ]
+  },
+  {
+   "name": "Roar",
+   "frames": 60,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Roar",
+     "time": 0.3
+    }
+   ]
+  },
+  {
+   "name": "Hit",
+   "frames": 14,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Death",
+   "frames": 60,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 1.6
+    }
+   ]
+  }
+ ]
+}

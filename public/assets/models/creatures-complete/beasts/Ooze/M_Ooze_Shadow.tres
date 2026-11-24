@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/ooze/ooze_jelly_shadow.gdshader" id="1_02vcm"]
+[ext_resource type="Texture2D" path="res://beasts/Ooze/T_Ooze.png" id="2_rlxnp"]
+
+[resource]
+resource_name = "Shadow"
+render_priority = 0
+shader = ExtResource("1_02vcm")
+shader_parameter/masks = ExtResource("2_rlxnp")
+shader_parameter/thin_color = null
+shader_parameter/mid_color = null
+shader_parameter/core_color = null
+shader_parameter/crevice_color = null
+shader_parameter/fresnel = null
+shader_parameter/fresnel_power = null
+shader_parameter/smoothness = null
+shader_parameter/glow = null
+shader_parameter/back_fade = null
+shader_parameter/wobble = null
+shader_parameter/wobble_speed = null
+shader_parameter/shadow_density = null

@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_wl08t"]
+[ext_resource type="Texture2D" path="res://insectoids/Wasp/T_Wasp.png" id="2_s8ys7"]
+
+[resource]
+resource_name = "Dark"
+render_priority = 0
+shader = ExtResource("1_wl08t")
+shader_parameter/coat = ExtResource("2_s8ys7")
+shader_parameter/tint = Color(0.74, 0.72, 0.7, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = null
+shader_parameter/normal_scale = null

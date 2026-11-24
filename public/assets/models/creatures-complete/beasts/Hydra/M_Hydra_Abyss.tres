@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_7so0k"]
+[ext_resource type="Texture2D" path="res://beasts/Hydra/T_Hydra_Abyss.png" id="2_pv3mn"]
+[ext_resource type="Texture2D" path="res://beasts/Hydra/T_Hydra_Normal.png" id="3_h8u0d"]
+
+[resource]
+resource_name = "Abyss"
+render_priority = 0
+shader = ExtResource("1_7so0k")
+shader_parameter/coat = ExtResource("2_pv3mn")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = true
+shader_parameter/normal_map = ExtResource("3_h8u0d")
+shader_parameter/normal_scale = 1.0

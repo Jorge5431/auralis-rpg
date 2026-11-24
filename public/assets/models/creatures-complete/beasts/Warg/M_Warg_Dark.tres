@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_orqtu"]
+[ext_resource type="Texture2D" path="res://beasts/Warg/T_Warg.png" id="2_ityy8"]
+[ext_resource type="Texture2D" path="res://beasts/Warg/T_Warg_Normal.png" id="3_ocld3"]
+
+[resource]
+resource_name = "Dark"
+render_priority = 0
+shader = ExtResource("1_orqtu")
+shader_parameter/coat = ExtResource("2_ityy8")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = true
+shader_parameter/normal_map = ExtResource("3_ocld3")
+shader_parameter/normal_scale = 1.0

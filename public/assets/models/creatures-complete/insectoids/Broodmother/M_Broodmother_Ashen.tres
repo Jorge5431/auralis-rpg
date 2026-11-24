@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_jal08"]
+[ext_resource type="Texture2D" path="res://insectoids/Broodmother/T_Broodmother.png" id="2_7l7me"]
+
+[resource]
+resource_name = "Ashen"
+render_priority = 0
+shader = ExtResource("1_jal08")
+shader_parameter/coat = ExtResource("2_7l7me")
+shader_parameter/tint = Color(0.86, 0.84, 0.82, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = null
+shader_parameter/normal_scale = null

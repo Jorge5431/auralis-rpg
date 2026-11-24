@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_knd4m"]
+[ext_resource type="Texture2D" path="res://insectoids/Centipede/T_Centipede.png" id="2_bdrha"]
+
+[resource]
+resource_name = "Dark"
+render_priority = 0
+shader = ExtResource("1_knd4m")
+shader_parameter/coat = ExtResource("2_bdrha")
+shader_parameter/tint = Color(0.72, 0.7, 0.72, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = null
+shader_parameter/normal_scale = null

@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_lm88p"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_0e0n1"]
+
+[sub_resource type="Resource" id="Resource_nd5co"]
+script = ExtResource("1_lm88p")
+name = "Idle"
+weight = 1.5
+clips = PackedStringArray("Idle")
+
+[sub_resource type="Resource" id="Resource_5yeyf"]
+script = ExtResource("1_lm88p")
+name = "Graze"
+weight = 3.0
+clips = PackedStringArray("Graze")
+hold = Vector2(5, 10)
+next = "Alert"
+
+[sub_resource type="Resource" id="Resource_82ujq"]
+script = ExtResource("1_lm88p")
+name = "Alert"
+weight = 0.4
+clips = PackedStringArray("Alert")
+hold = Vector2(1.5, 2.5)
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_btx40"]
+script = ExtResource("1_lm88p")
+name = "Call"
+weight = 0.3
+clips = PackedStringArray("Call")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_tgkey"]
+script = ExtResource("1_lm88p")
+name = "Walk"
+weight = 2.0
+clips = PackedStringArray("Walk")
+moves = true
+
+[sub_resource type="Resource" id="Resource_war2v"]
+script = ExtResource("1_lm88p")
+name = "Trot"
+weight = 0.5
+clips = PackedStringArray("Trot")
+moves = true
+hold = Vector2(2, 4)
+
+[sub_resource type="Resource" id="Resource_rvpil"]
+script = ExtResource("1_lm88p")
+name = "Run"
+weight = 0.25
+clips = PackedStringArray("Run")
+moves = true
+hold = Vector2(1.2, 2.5)
+
+[sub_resource type="Resource" id="Resource_lh173"]
+script = ExtResource("1_lm88p")
+name = "Sleep"
+weight = 0.3
+clips = PackedStringArray("Sleep")
+hold = Vector2(4, 7)
+next = "Wake"
+
+[sub_resource type="Resource" id="Resource_k4n2d"]
+script = ExtResource("1_lm88p")
+name = "Wake"
+weight = 0.0
+clips = PackedStringArray("Wake")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_qpb6w"]
+script = ExtResource("1_lm88p")
+name = "Hit"
+weight = 0.2
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_8borr"]
+script = ExtResource("1_lm88p")
+name = "Death"
+weight = 0.1
+clips = PackedStringArray("Death")
+hold_after = 2.5
+next = "Wake"
+
+[resource]
+script = ExtResource("2_0e0n1")
+pools = Array[ExtResource("1_lm88p")]([SubResource("Resource_nd5co"), SubResource("Resource_5yeyf"), SubResource("Resource_82ujq"), SubResource("Resource_btx40"), SubResource("Resource_tgkey"), SubResource("Resource_war2v"), SubResource("Resource_rvpil"), SubResource("Resource_lh173"), SubResource("Resource_k4n2d"), SubResource("Resource_qpb6w"), SubResource("Resource_8borr")])

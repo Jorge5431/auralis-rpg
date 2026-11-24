@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_bjny3"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_khalp"]
+
+[sub_resource type="Resource" id="Resource_byj77"]
+script = ExtResource("1_bjny3")
+name = "Idle"
+weight = 2.0
+clips = PackedStringArray("Idle", "IdlePant")
+
+[sub_resource type="Resource" id="Resource_2810x"]
+script = ExtResource("1_bjny3")
+name = "Walk"
+weight = 2.2
+clips = PackedStringArray("Walk")
+moves = true
+
+[sub_resource type="Resource" id="Resource_4u7k3"]
+script = ExtResource("1_bjny3")
+name = "Trot"
+weight = 1.6
+clips = PackedStringArray("Trot")
+moves = true
+hold = Vector2(2, 5)
+
+[sub_resource type="Resource" id="Resource_mc5ah"]
+script = ExtResource("1_bjny3")
+name = "Run"
+weight = 0.7
+clips = PackedStringArray("Run")
+moves = true
+hold = Vector2(1.5, 3)
+
+[sub_resource type="Resource" id="Resource_88pwr"]
+script = ExtResource("1_bjny3")
+name = "Threat"
+weight = 0.8
+clips = PackedStringArray("Threat")
+next = "Bite"
+
+[sub_resource type="Resource" id="Resource_6m0de"]
+script = ExtResource("1_bjny3")
+name = "Bite"
+weight = 1.2
+clips = PackedStringArray("Bite")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_l2piv"]
+script = ExtResource("1_bjny3")
+name = "Lunge"
+weight = 0.8
+clips = PackedStringArray("Lunge")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_leqb7"]
+script = ExtResource("1_bjny3")
+name = "Howl"
+weight = 0.5
+clips = PackedStringArray("Howl")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_xwld2"]
+script = ExtResource("1_bjny3")
+name = "Hit"
+weight = 0.5
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_xo7nm"]
+script = ExtResource("1_bjny3")
+name = "Death"
+weight = 0.25
+clips = PackedStringArray("Death")
+hold_after = 2.0
+next = "GetUp"
+
+[sub_resource type="Resource" id="Resource_vm6mq"]
+script = ExtResource("1_bjny3")
+name = "GetUp"
+weight = 0.0
+clips = PackedStringArray("GetUp")
+next = "Idle"
+
+[resource]
+script = ExtResource("2_khalp")
+pools = Array[ExtResource("1_bjny3")]([SubResource("Resource_byj77"), SubResource("Resource_2810x"), SubResource("Resource_4u7k3"), SubResource("Resource_mc5ah"), SubResource("Resource_88pwr"), SubResource("Resource_6m0de"), SubResource("Resource_l2piv"), SubResource("Resource_leqb7"), SubResource("Resource_xwld2"), SubResource("Resource_xo7nm"), SubResource("Resource_vm6mq")])

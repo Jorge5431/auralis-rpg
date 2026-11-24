@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_mru7x"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_8foa1"]
+
+[sub_resource type="Resource" id="Resource_f6ub8"]
+script = ExtResource("1_mru7x")
+name = "Idle"
+weight = 2.0
+clips = PackedStringArray("Idle")
+hold = Vector2(4, 8)
+
+[sub_resource type="Resource" id="Resource_rx73v"]
+script = ExtResource("1_mru7x")
+name = "Walk"
+weight = 0.8
+clips = PackedStringArray("Walk")
+moves = true
+hold = Vector2(2, 5)
+
+[sub_resource type="Resource" id="Resource_k235x"]
+script = ExtResource("1_mru7x")
+name = "Screech"
+weight = 0.4
+clips = PackedStringArray("Screech")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_mq1ax"]
+script = ExtResource("1_mru7x")
+name = "Hit"
+weight = 0.3
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_psvs0"]
+script = ExtResource("1_mru7x")
+name = "Death"
+weight = 0.1
+clips = PackedStringArray("Death")
+hold_after = 2.5
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_ltddy"]
+script = ExtResource("1_mru7x")
+name = "TakeOff"
+weight = 0.9
+clips = PackedStringArray("TakeOff")
+next = "Flight"
+
+[sub_resource type="Resource" id="Resource_pbxfa"]
+script = ExtResource("1_mru7x")
+name = "Flight"
+weight = 0.0
+clips = PackedStringArray("Fly", "Glide", "Fly", "Dive", "Fly", "Glide")
+sequence = true
+moves = true
+hold = Vector2(2, 4)
+next = "Land"
+
+[sub_resource type="Resource" id="Resource_ohpwj"]
+script = ExtResource("1_mru7x")
+name = "Land"
+weight = 0.0
+clips = PackedStringArray("Land")
+next = "Idle"
+
+[resource]
+script = ExtResource("2_8foa1")
+pools = Array[ExtResource("1_mru7x")]([SubResource("Resource_f6ub8"), SubResource("Resource_rx73v"), SubResource("Resource_k235x"), SubResource("Resource_mq1ax"), SubResource("Resource_psvs0"), SubResource("Resource_ltddy"), SubResource("Resource_pbxfa"), SubResource("Resource_ohpwj")])

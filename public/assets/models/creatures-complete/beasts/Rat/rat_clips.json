@@ -1,0 +1,99 @@
+{
+ "clips": [
+  {
+   "name": "Idle",
+   "frames": 90,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Rear",
+   "frames": 84,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Walk",
+   "frames": 16,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Run",
+   "frames": 10,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Bite",
+   "frames": 24,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.4
+    }
+   ]
+  },
+  {
+   "name": "Lunge",
+   "frames": 36,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": true,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.73
+    }
+   ]
+  },
+  {
+   "name": "Threat",
+   "frames": 60,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Hit",
+   "frames": 12,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Death",
+   "frames": 54,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 1.6
+    }
+   ]
+  },
+  {
+   "name": "GetUp",
+   "frames": 33,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  }
+ ]
+}

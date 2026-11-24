@@ -1,0 +1,75 @@
+{
+ "clips": [
+  {
+   "name": "Idle",
+   "frames": 48,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Hover",
+   "frames": 32,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Fly",
+   "frames": 20,
+   "fps": 30,
+   "loop": true,
+   "rootMotion": true,
+   "events": []
+  },
+  {
+   "name": "Dive",
+   "frames": 45,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Bite",
+     "time": 0.73
+    }
+   ]
+  },
+  {
+   "name": "Screech",
+   "frames": 54,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Screech",
+     "time": 0.5
+    }
+   ]
+  },
+  {
+   "name": "Hit",
+   "frames": 15,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": []
+  },
+  {
+   "name": "Death",
+   "frames": 60,
+   "fps": 30,
+   "loop": false,
+   "rootMotion": false,
+   "events": [
+    {
+     "name": "Dead",
+     "time": 1.3
+    }
+   ]
+  }
+ ]
+}

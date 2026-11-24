@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat_two_sided.gdshader" id="1_dkg0k"]
+[ext_resource type="Texture2D" path="res://beasts/Hydra/T_HydraFins.png" id="2_8oexu"]
+[ext_resource type="Texture2D" path="res://beasts/Hydra/T_HydraFins_Normal.png" id="3_lsumi"]
+
+[resource]
+resource_name = "FinsSea"
+render_priority = 0
+shader = ExtResource("1_dkg0k")
+shader_parameter/coat = ExtResource("2_8oexu")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = true
+shader_parameter/normal_map = ExtResource("3_lsumi")
+shader_parameter/normal_scale = 0.8

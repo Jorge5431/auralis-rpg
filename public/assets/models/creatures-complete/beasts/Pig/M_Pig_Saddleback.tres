@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_ss3h0"]
+[ext_resource type="Texture2D" path="res://beasts/Pig/T_Pig_Saddleback.png" id="2_db7lh"]
+
+[resource]
+resource_name = "Saddleback"
+render_priority = 0
+shader = ExtResource("1_ss3h0")
+shader_parameter/coat = ExtResource("2_db7lh")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = null
+shader_parameter/normal_scale = null

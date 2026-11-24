@@ -1,0 +1,42 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/ooze/ooze_jelly_near.gdshader" id="1_t41i8"]
+[ext_resource type="Texture2D" path="res://beasts/Ooze/T_Ooze.png" id="2_66qih"]
+[ext_resource type="Shader" path="res://addons/beasts/ooze/ooze_jelly_far.gdshader" id="3_qofe6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gcjvd"]
+resource_name = "Ochre"
+render_priority = 0
+shader = ExtResource("1_t41i8")
+shader_parameter/masks = ExtResource("2_66qih")
+shader_parameter/thin_color = Color(0.9490196, 0.81960785, 0.4509804, 1)
+shader_parameter/mid_color = Color(0.78431374, 0.56078434, 0.18039216, 1)
+shader_parameter/core_color = Color(0.49411765, 0.30980393, 0.09803922, 1)
+shader_parameter/crevice_color = Color(0.22745098, 0.13333334, 0.03137255, 1)
+shader_parameter/fresnel = null
+shader_parameter/fresnel_power = null
+shader_parameter/smoothness = null
+shader_parameter/glow = null
+shader_parameter/back_fade = null
+shader_parameter/wobble = null
+shader_parameter/wobble_speed = null
+shader_parameter/opacity = 1.0
+
+[resource]
+resource_name = "Ochre"
+render_priority = -1
+next_pass = SubResource("ShaderMaterial_gcjvd")
+shader = ExtResource("3_qofe6")
+shader_parameter/masks = ExtResource("2_66qih")
+shader_parameter/thin_color = Color(0.9490196, 0.81960785, 0.4509804, 1)
+shader_parameter/mid_color = Color(0.78431374, 0.56078434, 0.18039216, 1)
+shader_parameter/core_color = Color(0.49411765, 0.30980393, 0.09803922, 1)
+shader_parameter/crevice_color = Color(0.22745098, 0.13333334, 0.03137255, 1)
+shader_parameter/fresnel = null
+shader_parameter/fresnel_power = null
+shader_parameter/smoothness = null
+shader_parameter/glow = null
+shader_parameter/back_fade = null
+shader_parameter/wobble = null
+shader_parameter/wobble_speed = null
+shader_parameter/opacity = 1.0

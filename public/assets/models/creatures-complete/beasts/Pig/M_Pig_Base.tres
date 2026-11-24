@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_jgi7n"]
+[ext_resource type="Texture2D" path="res://beasts/Pig/T_Pig.png" id="2_ibbma"]
+
+[resource]
+resource_name = "Base"
+render_priority = 0
+shader = ExtResource("1_jgi7n")
+shader_parameter/coat = ExtResource("2_ibbma")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = null
+shader_parameter/normal_scale = null

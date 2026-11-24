@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_era5u"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_i58kp"]
+
+[sub_resource type="Resource" id="Resource_ileqi"]
+script = ExtResource("1_era5u")
+name = "Idle"
+weight = 2.0
+clips = PackedStringArray("Idle")
+hold = Vector2(2, 5)
+
+[sub_resource type="Resource" id="Resource_sn81m"]
+script = ExtResource("1_era5u")
+name = "Rear"
+weight = 0.8
+clips = PackedStringArray("Rear")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_gf6ut"]
+script = ExtResource("1_era5u")
+name = "Walk"
+weight = 2.2
+clips = PackedStringArray("Walk")
+moves = true
+hold = Vector2(2, 5)
+
+[sub_resource type="Resource" id="Resource_mlak0"]
+script = ExtResource("1_era5u")
+name = "Run"
+clips = PackedStringArray("Run")
+moves = true
+hold = Vector2(1.5, 3)
+
+[sub_resource type="Resource" id="Resource_rk3q4"]
+script = ExtResource("1_era5u")
+name = "Threat"
+weight = 0.7
+clips = PackedStringArray("Threat")
+next = "Bite"
+
+[sub_resource type="Resource" id="Resource_3ff0j"]
+script = ExtResource("1_era5u")
+name = "Bite"
+weight = 1.2
+clips = PackedStringArray("Bite")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_e8gko"]
+script = ExtResource("1_era5u")
+name = "Lunge"
+weight = 0.8
+clips = PackedStringArray("Lunge")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_bd0v1"]
+script = ExtResource("1_era5u")
+name = "Hit"
+weight = 0.5
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_r0grq"]
+script = ExtResource("1_era5u")
+name = "Death"
+weight = 0.25
+clips = PackedStringArray("Death")
+hold_after = 2.0
+next = "GetUp"
+
+[sub_resource type="Resource" id="Resource_7vfef"]
+script = ExtResource("1_era5u")
+name = "GetUp"
+weight = 0.0
+clips = PackedStringArray("GetUp")
+next = "Idle"
+
+[resource]
+script = ExtResource("2_i58kp")
+pools = Array[ExtResource("1_era5u")]([SubResource("Resource_ileqi"), SubResource("Resource_sn81m"), SubResource("Resource_gf6ut"), SubResource("Resource_mlak0"), SubResource("Resource_rk3q4"), SubResource("Resource_3ff0j"), SubResource("Resource_e8gko"), SubResource("Resource_bd0v1"), SubResource("Resource_r0grq"), SubResource("Resource_7vfef")])

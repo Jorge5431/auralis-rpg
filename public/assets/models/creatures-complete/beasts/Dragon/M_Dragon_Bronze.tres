@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://addons/beasts/shaders/creature_coat.gdshader" id="1_jch6b"]
+[ext_resource type="Texture2D" path="res://beasts/Dragon/T_Dragon_Bronze.png" id="2_y5xju"]
+[ext_resource type="Texture2D" path="res://beasts/Dragon/T_Dragon_Normal.png" id="3_k87iq"]
+
+[resource]
+resource_name = "Bronze"
+render_priority = 0
+shader = ExtResource("1_jch6b")
+shader_parameter/coat = ExtResource("2_y5xju")
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/smoothness = 1.0
+shader_parameter/use_normal_map = true
+shader_parameter/normal_map = ExtResource("3_k87iq")
+shader_parameter/normal_scale = 1.0

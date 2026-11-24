@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CreatureAnimationSet" format=3]
+
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_pool.gd" id="1_miaj5"]
+[ext_resource type="Script" path="res://addons/beasts/runtime/creature_animation_set.gd" id="2_d6qr2"]
+
+[sub_resource type="Resource" id="Resource_37mxg"]
+script = ExtResource("1_miaj5")
+name = "Idle"
+weight = 2.0
+clips = PackedStringArray("Idle")
+
+[sub_resource type="Resource" id="Resource_wfvog"]
+script = ExtResource("1_miaj5")
+name = "Crawl"
+weight = 2.2
+clips = PackedStringArray("Crawl")
+moves = true
+hold = Vector2(4, 8)
+
+[sub_resource type="Resource" id="Resource_7cyiu"]
+script = ExtResource("1_miaj5")
+name = "Lunge"
+weight = 0.9
+clips = PackedStringArray("Lunge")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_6glxj"]
+script = ExtResource("1_miaj5")
+name = "Hit"
+weight = 0.4
+clips = PackedStringArray("Hit")
+next = "Idle"
+
+[sub_resource type="Resource" id="Resource_d63sa"]
+script = ExtResource("1_miaj5")
+name = "Death"
+weight = 0.2
+clips = PackedStringArray("Death")
+hold_after = 2.5
+next = "Idle"
+
+[resource]
+script = ExtResource("2_d6qr2")
+pools = Array[ExtResource("1_miaj5")]([SubResource("Resource_37mxg"), SubResource("Resource_wfvog"), SubResource("Resource_7cyiu"), SubResource("Resource_6glxj"), SubResource("Resource_d63sa")])
