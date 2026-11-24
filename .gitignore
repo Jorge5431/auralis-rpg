@@ -15,3 +15,6 @@ assets_otimizados/
 *.unitypackage
 Thumbs.db
 .DS_Store
+
+# Pacote de icones com redistribuicao restrita
+/public/assets/icons/Fantasy_RPG_Icon_Free_Sampler_v1.0/
