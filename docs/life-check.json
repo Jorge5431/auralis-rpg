@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Pesca espera a fisgada e concede peixe",
+    "passed": true
+  },
+  {
+    "name": "Agricultura consome semente, rega e colhe após maturidade simulada",
+    "passed": true
+  },
+  {
+    "name": "Construção exige materiais e baú transfere itens sem duplicar",
+    "passed": true
+  }
+]

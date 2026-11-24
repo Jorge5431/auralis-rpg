@@ -1,24 +1,53 @@
-# Auralis RPG v9 — Ilha flutuante
+# Auralis RPG V10
 
-Primeira fundação 3D da ilha de Auralis, criada do zero a partir do desenho enviado: vila e comércio ao norte, criação de ovelhas e torre a leste, floresta nas laterais, lago no centro e montanha com cachoeira ao sul. O projeto usa Three.js e controles orbitais para computador e telas sensíveis ao toque.
+Implementação nova em TypeScript, Three.js, Vite e Rapier, na branch `rebuild/auralis-v10`. A biblioteca e o código anterior permanecem preservados. A entrada ativa é `src/v10/main.ts`.
 
-## Abrir no Windows
+## Executar
 
-1. Instale o Node.js 20.19 ou mais recente (ou 22.12 ou mais recente).
-2. Abra um terminal nesta pasta e execute `npm install`.
-3. Execute `npm run dev` e abra o endereço local que aparecer.
+Requisitos: Node.js 22.12+ ou 24, navegador com WebGL2.
 
-Para gerar uma versão estática, execute `npm run build`. Os arquivos finais ficam em `dist/`.
+```powershell
+npm ci
+npm run dev
+```
 
-## Controles
+Abra http://127.0.0.1:5173. Para validar a distribuição:
 
-- Arrastar com o mouse ou um dedo: girar a câmera.
-- Roda do mouse ou pinça: aproximar e afastar.
-- Botões de região: levar a câmera até a vila, o rebanho, o lago ou a montanha.
-- “Reiniciar vista”: voltar à visão geral.
+```powershell
+npm run build
+npm run preview
+```
 
-## Recursos
+O build está em `dist/`. O deploy pressupõe a raiz do domínio. Nenhum deploy ou push remoto foi realizado.
 
-Os modelos e mapas de textura usados pelo projeto estão em `public/assets/`. As texturas de Poly Haven e os modelos CC0 de Kenney e Quaternius foram selecionados das pastas locais; as imagens de personagem foram reduzidas para 1K, e apenas dependências glTF necessárias foram incluídas. O modelo de ovelha foi extraído individualmente do pacote de criaturas. Os arquivos de origem grandes, arquivos Blender/FBX e pacotes ZIP não fazem parte do repositório.
+## Jogar
 
-Consulte [assets/CREDITS.md](assets/CREDITS.md) e os arquivos de licença junto aos modelos.
+Selecione Nova jornada, nome e classe. Converse com Helena na praça para iniciar as missões. O minimapa mostra vila (V), fazenda (F) e torre (T).
+
+- WASD/setas: mover; Shift: correr; Espaço: saltar.
+- Arrastar: girar câmera; roda/dois dedos: zoom; clique/toque no chão: percurso por grade.
+- E: conversar, coletar, recolher lã, pescar ou confirmar construção.
+- F: ataque; Q: habilidade (cura para clérigo, dano aumentado nas outras classes); R: esquiva.
+- I: mochila; J: missões; C: receitas; B: construção; M/V: visão aérea.
+- G: plantar na fazenda; H: regar e colher após 60 segundos.
+- Esc: fechar menu ou cancelar construção.
+- Controles touch oferecem movimento, câmera e ações; os botões G/H correspondem à agricultura.
+
+O progresso é salvo manualmente pelo botão Salvar e automaticamente a cada 30 segundos. IndexedDB armazena a jornada neste navegador e nesta origem. Não limpe os dados do site se quiser preservá-la. Preferências de áudio/qualidade usam localStorage.
+
+## Verificar
+
+```powershell
+npm run audit
+npm test
+npm run test:browser
+node scripts/integration-check.mjs
+```
+
+Os testes de navegador usam Microsoft Edge instalado no caminho padrão do Windows e requerem o servidor local na porta 5173. Relatórios e capturas ficam em `docs/`.
+
+## Estado da entrega
+
+Esta é uma versão jogável em desenvolvimento, **não a implementação completa dos critérios do PROMPT_MASTER V10**. Ela possui terreno explorável, seis classes, física, animações, NPCs, combate com lobos, recursos, inventário, comércio, seis missões sequenciais, receitas, pesca, agricultura, construção básica e salvamento. Os sistemas e as limitações são descritos em [docs/STATUS.md](docs/STATUS.md). A qualidade visual ainda não equivale às referências artísticas anexadas.
+
+Créditos e condições de distribuição: [assets/CREDITS.md](assets/CREDITS.md). As imagens de referência privadas, os recursos excluídos e HDRIs de procedência ainda não confirmada não foram incorporados ao runtime novo.

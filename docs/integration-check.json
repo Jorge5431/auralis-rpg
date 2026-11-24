@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "name": "Colisão impede atravessar a parede da casa",
+      "passed": true
+    },
+    {
+      "name": "Diálogo da guilda conclui chegada e recompensa",
+      "passed": true
+    },
+    {
+      "name": "Compra e venda via botões alteram inventário e ouro",
+      "passed": true
+    },
+    {
+      "name": "Coleta real remove recurso e acrescenta item",
+      "passed": true
+    },
+    {
+      "name": "Ataques com cooldown causam morte e loot",
+      "passed": true
+    },
+    {
+      "name": "Salva e recupera inventário, posição e missão após reload",
+      "passed": true
+    },
+    {
+      "name": "Seis modelos possuem Idle, Walk e ação de classe válidos",
+      "passed": true
+    },
+    {
+      "name": "Navegação por grade contorna lago e construções",
+      "passed": true
+    },
+    {
+      "name": "Medição mobile emulada",
+      "fps": 55.8938017766244
+    },
+    {
+      "name": "Layout touch e joystick movem personagem em emulação mobile",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
