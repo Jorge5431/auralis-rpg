@@ -1,0 +1,962 @@
+[
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Peasant_BaseColor.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 5055760,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Peasant_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 655637
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Peasant_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 231177
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Peasant_Normal.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 14110336,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Peasant_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 874795
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Peasant_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 288220
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Peasant_ORM.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 9903835,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Peasant_ORM.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 648791
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Peasant_ORM.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 187714
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Ranger_BaseColor.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 6630927,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Ranger_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 840454
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Ranger_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 277667
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Ranger_Normal.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 12713653,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Ranger_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 924803
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Ranger_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 304539
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Ranger_ORM.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 10792085,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Ranger_ORM.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 786403
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Ranger_ORM.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 226644
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Dark_BaseColor.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1348542,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Dark_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 454882
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Dark_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 165918
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Normal.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 3913459,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 825656
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 267218
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Roughness.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 3274215,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Roughness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 682265
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Regular_Female_Roughness.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 183219
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Dark_BaseColor.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1316151,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Dark_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 446943
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Dark_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 161939
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Normal.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 4064184,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 890195
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 290110
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Roughness.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 3160102,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Roughness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 654518
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Modular Parts/T_Regular_Male_Roughness.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 174490
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Peasant_BaseColor.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 5055760,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Peasant_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 655637
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Peasant_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 231177
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Peasant_Normal.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 14110336,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Peasant_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 874795
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Peasant_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 288220
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Peasant_ORM.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 9903835,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Peasant_ORM.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 648791
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Peasant_ORM.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 187714
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Ranger_BaseColor.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 6630927,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Ranger_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 840454
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Ranger_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 277667
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Ranger_Normal.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 12713653,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Ranger_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 924803
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Ranger_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 304539
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Ranger_ORM.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 10792085,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Ranger_ORM.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 786403
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Ranger_ORM.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 226644
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Regular_Female_Dark_BaseColor.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1348542,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Regular_Female_Dark_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 454882
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Regular_Female_Dark_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 165918
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Regular_Female_Normal.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 3913459,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Regular_Female_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 825656
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Regular_Female_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 267218
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Regular_Female_Roughness.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 3274215,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Regular_Female_Roughness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 682265
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Regular_Female_Roughness.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 183219
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Regular_Male_Dark_BaseColor.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1316151,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Regular_Male_Dark_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 446943
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Regular_Male_Dark_BaseColor.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 161939
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Regular_Male_Normal.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 4064184,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Regular_Male_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 890195
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Regular_Male_Normal.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 290110
+    }
+  },
+  {
+    "original": "models/characters/quaternius-modular/Outfits/T_Regular_Male_Roughness.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 3160102,
+    "desktop": {
+      "path": "optimized/desktop/models/characters/quaternius-modular/Outfits/T_Regular_Male_Roughness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 654518
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/characters/quaternius-modular/Outfits/T_Regular_Male_Roughness.png",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 174490
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_Dragon.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 22845609,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_Dragon.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 7192227
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_Dragon.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2199200
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_DragonWing.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 3324612,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_DragonWing.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 697636
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_DragonWing.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 258864
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_DragonWing_Ash.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 3185023,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_DragonWing_Ash.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 678503
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_DragonWing_Ash.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 250381
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_DragonWing_Bronze.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 3562634,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_DragonWing_Bronze.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 787019
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_DragonWing_Bronze.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 289004
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_DragonWing_Normal.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 4817080,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_DragonWing_Normal.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 1279900
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_DragonWing_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 403417
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_Dragon_Ash.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 21973807,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_Dragon_Ash.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 7264589
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_Dragon_Ash.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2219737
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_Dragon_Bronze.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 23025900,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_Dragon_Bronze.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 7525474
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_Dragon_Bronze.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2293731
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Dragon/T_Dragon_Normal.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 29398750,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Dragon/T_Dragon_Normal.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 8676556
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Dragon/T_Dragon_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2371880
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_Hydra.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 24753784,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_Hydra.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 8047638
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_Hydra.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2414995
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_HydraFins.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1473457,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_HydraFins.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 1109171
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_HydraFins.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 397736
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_HydraFins_Abyss.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1449334,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_HydraFins_Abyss.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 1070021
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_HydraFins_Abyss.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 399158
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_HydraFins_Normal.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1215399,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_HydraFins_Normal.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 886715
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_HydraFins_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 388494
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_HydraFins_Swamp.png",
+    "original_resolution": [
+      2048,
+      2048
+    ],
+    "original_bytes": 1380987,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_HydraFins_Swamp.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 1023885
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_HydraFins_Swamp.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 363844
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_Hydra_Abyss.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 24097444,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_Hydra_Abyss.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 7844628
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_Hydra_Abyss.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2363276
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_Hydra_Normal.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 32065941,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_Hydra_Normal.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 9208669
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_Hydra_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2503681
+    }
+  },
+  {
+    "original": "models/creatures-complete/beasts/Hydra/T_Hydra_Swamp.png",
+    "original_resolution": [
+      4096,
+      4096
+    ],
+    "original_bytes": 23616759,
+    "desktop": {
+      "path": "optimized/desktop/models/creatures-complete/beasts/Hydra/T_Hydra_Swamp.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 7863214
+    },
+    "mobile": {
+      "path": "optimized/mobile/models/creatures-complete/beasts/Hydra/T_Hydra_Swamp.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 2385373
+    }
+  }
+]
